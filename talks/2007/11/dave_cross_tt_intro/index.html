@@ -1,0 +1,588 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Introduction to the Template Toolkit</title>
+<!-- metadata -->
+<meta name="generator" content="spod5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="Milton Keynes Perl Mongers / 15th November 2007" />
+<meta name="author" content="Dave Cross &lt;dave@mag-sol.com>" />
+<meta name="company" content="Magnum Solutions Ltd" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/magnum//slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/magnum//outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/magnum//print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/magnum//opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="ui/magnum//slides.js" type="text/javascript"></script>
+
+<style type="text/css">
+<!--
+/* 
+ * perltidy's styles
+ */
+.c  { color: #228B22;                    } /* comment */
+.cm { color: #000000;                    } /* comma */
+.co { color: #000000;                    } /* colon */
+.h  { color: #CD5555; font-weight:bold;  } /* here-doc-target */
+.hh { color: #CD5555; font-style:italic; } /* here-doc-text */
+.i  { color: #00688B;                    } /* identifier */
+.j  { color: #000000; font-weight:bold;  } /* label */
+.k  { color: #8B4513; font-weight:bold;  } /* keyword */
+.m  { color: #FF0000; font-weight:bold;  } /* subroutine */
+.n  { color: #B452CD;                    } /* numeric */
+.p  { color: #000000;                    } /* paren */
+.pd { color: #228B22; font-style:italic; } /* pod-text */
+.pu { color: #000000;                    } /* punctuation */
+.q  { color: #CD5555;                    } /* quote */
+.s  { color: #000000;                    } /* structure */
+.sc { color: #000000;                    } /* semicolon */
+.v  { color: #B452CD;                    } /* v-string */
+.w  { color: #000000;                    } /* bareword */
+
+/* ====================================================================== *
+ * Sample stylesheet for Syntax::Highlight::HTML                          *
+ *                                                                        *
+ * Copyright (C)2004 Sebastien Aperghis-Tramoni, All Rights Reserved.     *
+ *                                                                        *
+ * This file is free software; you can redistribute it and/or modify      *
+ * it under the same terms as Perl itself.                                *
+ * ====================================================================== */
+
+.h-decl { color: #336699; font-style: italic; }   /* doctype declaration  */
+.h-pi   { color: #336699;                     }   /* process instruction  */
+.h-com  { color: #338833; font-style: italic; }   /* comment              */
+.h-ab   { color: #000000; font-weight: bold;  }   /* angles as tag delim. */
+.h-tag  { color: #993399; font-weight: bold;  }   /* tag name             */
+.h-attr { color: #000000; font-weight: bold;  }   /* attribute name       */
+.h-attv { color: #333399;                     }   /* attribute value      */
+.h-ent  { color: #cc3333;                     }   /* entity               */
+
+.h-lno  { color: #cccccc; background: #eee;   }   /* line numbers         */
+-->
+</style>
+
+
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Milton Keynes Perl Mongers / 15th November 2007</h1>
+<h2>Introduction to the Template Toolkit</h2>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+
+<h1>Introduction to the Template Toolkit</h1>
+<h3>Dave Cross &lt;dave@mag-sol.com></h3>
+<h4>Magnum Solutions Ltd</h4>
+
+</div>
+
+<div class="slide">
+<h1>What is Templating</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Combination of data and fixed text to produce data</p>
+</li>
+<li>
+<p>Boilerplate text containing tags that are filled in</p>
+</li>
+<li>
+<p>Multiple copies with different data</p>
+</li>
+<li>
+<p>Form letters</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Contractually Obligated Form Letter Example</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<pre>  Dear [% name %],</pre>
+
+<pre>  According to our records you owe us GBP [% amount %].
+  Please pay before [% due %] or we will send the boys
+  round.</pre>
+
+<pre>  Regards.</pre>
+
+</li>
+<li>
+<p>Values within [% ... %] tags will be expanded</p>
+</li>
+<li>
+<p>Simple example of a template directive</p>
+</li>
+<li>
+<p>Basis of the direct marketing industry</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>The Template Toolkit</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>The Template Toolkit is a powerful templating engine written in Perl</p>
+</li>
+<li>
+<p>Command line tools available</p>
+</li>
+<li>
+<p>Other templating engines are available</p>
+<ul class="incremental">
+<li>
+<p>Text::Template</p>
+</li>
+<li>
+<p>HTML::Template</p>
+</li>
+<li>
+<p>HTML::Mason</p>
+</li>
+</ul>
+</li>
+<li>
+<p>We won't cover those</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Why Choose The Template Toolkit</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Not specialised for web use</p>
+<ul class="incremental">
+<li>
+<p>Use the same tool for all of your templating needs</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Templating language is not Perl</p>
+<ul class="incremental">
+<li>
+<p>Encourages separation of business logic and display logic</p>
+</li>
+<li>
+<p>Don't need to be a Perl programmer to write templates</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Badgers are cool</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Badgers Are Cool</h1>
+<div class="slidecontent">
+<img src="cover.png" />
+
+</div></div>
+<div class="slide">
+<h1>Form Letters Revisited</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Remember the form letter template</p>
+</li>
+<li>
+<pre>  Dear [% name %],</pre>
+
+<pre>  According to our records you owe us GBP [% amount %].
+  Please pay before [% due %] or we will send the boys
+  round.</pre>
+
+<pre>  Regards.</pre>
+
+</li>
+<li>
+<p>Process it using <code>tpage</code></p>
+</li>
+<li>
+<pre>  tpage --define name='Mr Cross' --define amount='100' \
+        --define due='1st April' letter.tt</pre>
+
+</li>
+<li>
+<p>Writes to STDOUT</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Form Letter Output</h1>
+<div class="slidecontent">
+<pre>  Dear Mr Cross,</pre>
+
+<pre>  According to our records you owe us GBP 100.</pre>
+
+<pre>  Please pay before 1st April or we will send the boys
+  round.</pre>
+
+<pre>  Regards.</pre>
+
+</div></div>
+<div class="slide">
+<h1>Tidying Up</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>We can use the FORMAT plugin to ensure that numbers are displayed to two decimal places</p>
+</li>
+<li>
+<pre>  [% USE money=format('%.2f') -%]
+  Dear [% name %],</pre>
+
+<pre>  According to our records you owe us GBP [% money(amount) %].</pre>
+
+<pre>  Please pay before [% due %] or we will send the boys
+  round.
+  Regards.</pre>
+
+</li>
+<li>
+<p>We'll see more plugins later</p>
+</li>
+<li>
+<p>Note: [% ... -%] - removes trailing whitespace</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Reading Data from a File</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Typing in every variable each time doesn't save us much time</p>
+</li>
+<li>
+<p>What if the data was in a file?</p>
+</li>
+<li>
+<pre>  name : amount : due
+  Mr Cross : 10 : 1st April
+  Mr Smith : 20 : 1st March
+  Mr Jones : 50 : 1st February</pre>
+
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>The Datafile Plugin</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Use the datafile plugin to read data from files</p>
+</li>
+<li>
+<pre>  [% USE money = format('%.2f') -%]
+  [% USE debtors = datafile(file) -%]
+  [% FOREACH debtor = debtors %]
+  Dear [% debtor.name %],
+  According to our records you owe us GBP [% money(debtor.amount) %]
+  Please pay before [% debtor.date %] or we will send the boys
+  round.
+  Regards.
+  [%- END %]</pre>
+
+</li>
+<li>
+<p>debtors variable is set from each row in file</p>
+</li>
+<li>
+<p>Field names taken from the first row of data</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Splitting the Output</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Out output now has all letters running together</p>
+</li>
+<li>
+<p>Use form feed character to separate them when printing</p>
+</li>
+<li>
+<pre>  [% FOREACH debtor = debtors -%]
+  Blah blah blah...
+  [% UNLESS loop.last -%]
+  ^L
+  [%- END %]
+  [%- END %]</pre>
+
+</li>
+<li>
+<p>"unless" works as it does in Perl</p>
+</li>
+<li>
+<p>"loop" is a special TT variable</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Accessing a Database</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>The template doesn't get much more complex if the data is stored in a database</p>
+</li>
+<li>
+<p>Use the DBI plugin</p>
+</li>
+<li>
+<pre>   [% USE money = format('%.2f') -%]
+   [% USE DBI(database = 'dbi:mysql:accounts'
+              username = 'acc_user'
+              password = 'sekrit') -%]
+   [% FOREACH debtor = DBI.query('select name, amount, due
+                                  from   debtors') -%]
+   Dear [% debtor.name %],
+   Blah blah blah...
+   [%- END %]</pre>
+
+</li>
+<li>
+<p>Most of the template is unchanged</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Format Dates</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Use the date plugin to format dates and times</p>
+</li>
+<li>
+<pre>  [% USE date(format = '%d %B') -%]
+  ... and then later...
+  [% date.format(debtor.due) -%]</pre>
+
+</li>
+<li>
+<p>Input date either epoch seconds of h:m:s d/m/y</p>
+</li>
+<li>
+<pre>  select name, amount
+         date_format(due, "%h:%i:%s %d/%m/%Y")
+           as due
+  from   debtors</pre>
+
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Processing XML</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Use XPath if your data is in XML</p>
+</li>
+<li>
+<pre>  [% USE debtors = XML.XPath(file) -%]
+  [% FOREACH debtor = debtors.findnodes('/debtors/debtor') -%]
+  Dear [% debtor.findvalue('name') %],
+  Blah blah blah...
+  [%- END %]</pre>
+
+</li>
+<li>
+<p>Other XML processors are available</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>The Templating Equation</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Templating can be expressed like this</p>
+</li>
+<li>
+<p>Data + Fixed Text = Output</p>
+</li>
+<li>
+<p>Form Letters look like this</p>
+<ul class="incremental">
+<li>
+<p>Alternative Data + Fixed Text = Alternative Output</p>
+</li>
+</ul>
+</li>
+<li>
+<p>We can also do this</p>
+<ul class="incremental">
+<li>
+<p>Data + Alternative Fixed Text = Alternative Output</p>
+</li>
+<li>
+<p>Different views of the same data</p>
+</li>
+</ul>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>An Aside: Objects in TT</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Perl objects work really well with TT</p>
+</li>
+<li>
+<p>Use plugins</p>
+</li>
+<li>
+<p>TT plugin is a wrapper around external Perl code</p>
+</li>
+<li>
+<p>Invoice example</p>
+<ul class="incremental">
+<li>
+<pre>  use My::Invoice;</pre>
+
+<pre>  my $inv = My::Invoice-&gt;new($id);</pre>
+
+<pre>  print $inv-&gt;date, $inv-&gt;customer-&gt;name;</pre>
+
+</li>
+</ul>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>An Aside: Template Plugins</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>From My::Invoice create a Template Plugin module</p>
+</li>
+<li>
+<p>Template::Plugin::My::Invoice</p>
+</li>
+<li>
+<p>Simple piece of boilerplate code</p>
+</li>
+<li>
+<pre>  [% USE inv = my.invoice(id) -%]
+  Date: [% inv.date %]
+  etc...</pre>
+
+</li>
+<li>
+<pre>  tpage --define inv=123 inv.tt &gt; inv.txt</pre>
+
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Alternative Views of the Same Data</h1>
+<div class="slidecontent">
+<pre> [% USE inv = my.invoice(id) -%]
+ INVOICE [% inv.id | format('%05d') %]</pre>
+
+<pre> Date: [% inv.date %]
+    
+ To: [% inv.client.name %]
+     [% FOREACH addr_line = inv.client.address.split('\n') -%]
+     [% addr_line %]
+     [% END -%]</pre>
+
+<pre> [% FOREACH line = inv.lines.sort('line_no') -%]
+ [% total = total + line.price -%]
+ [% line.description | format('%-40s') %] GBP [% line.price | format('%.2f') %]
+ [% END %]
+ [% 'Total:' | format('%40s') %] GBP [% total | format('%.2f') %]</pre>
+
+</div></div>
+<div class="slide">
+<h1>Alternative Views of the Same Data (2)</h1>
+<div class="slidecontent">
+<pre>  [% USE inv = my.invoice(id) -%]
+  &lt;html&gt;
+    &lt;head&gt;&lt;title&gt;Invoice [% inv.id | format('%05d') %]&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+      &lt;h1&gt;INVOICE [% inv.id | format('%05d') %]&lt;/h1&gt;
+      &lt;table&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Date:&lt;/td&gt;&lt;td&gt;[% inv.invdate %]&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;&lt;td colspan="2"&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td valign="top"&gt;To:&lt;/td&gt;
+          &lt;td&gt;[% inv.client.name;
+                 inv.client.address.split('\n').join('&lt;br&gt;') -%]
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;</pre>
+
+</div></div>
+<div class="slide">
+<h1>Alternative Views of the Same Data (3)</h1>
+<div class="slidecontent">
+<pre>      &lt;table&gt;
+        [% FOREACH line = inv.lines.sort('line_no') -%]
+        &lt;tr&gt;
+          &lt;td&gt;[% line.description; total = total + line.price %]&lt;/td&gt;
+          &lt;td&gt;GBP [% line.price | format('%.2f') %]&lt;/td&gt;
+        &lt;/tr&gt;
+        [% END %]
+        &lt;tr&gt;
+          &lt;td align="right"&gt;Total:&lt;/td&gt;
+          &lt;td&gt;EUR [% total | format('%.2f') %]&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;</pre>
+
+</div></div>
+<div class="slide">
+<h1>More Information</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>perldoc Template::Manual (and many more)</p>
+</li>
+<li>
+<p><a href="http://tt2.org/">http://tt2.org/</a></p>
+</li>
+<li>
+<p><a href="http://tt2.org/mailman/listinfo/templates">http://tt2.org/mailman/listinfo/templates</a></p>
+</li>
+<li>
+<p><i>Perl Template Toolkit</i> (the badger book)</p>
+</li>
+<li>
+<p><a href="http://mag-sol.com/Articles/tpage.html">http://mag-sol.com/Articles/tpage.html</a></p>
+</li>
+</ul>
+</div></div>
+
+
+</div>
+
+</body>
+</html>

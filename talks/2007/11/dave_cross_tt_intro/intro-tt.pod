@@ -1,0 +1,442 @@
+=meta title	Introduction to the Template Toolkit
+
+=meta presdate	Milton Keynes Perl Mongers / 15th November 2007
+
+=meta author	Dave Cross &lt;dave@mag-sol.com>
+
+=meta company	Magnum Solutions Ltd
+
+=meta base      ui/magnum
+
+=head1 What is Templating
+
++>>
+
+* Combination of data and fixed text to produce data
+
+* Boilerplate text containing tags that are filled in
+
+* Multiple copies with different data
+
+* Form letters
+
+-
+
+=head1 Contractually Obligated Form Letter Example
+
++>>
+
+=item
+
+  Dear [% name %],
+
+  According to our records you owe us GBP [% amount %].
+  Please pay before [% due %] or we will send the boys
+  round.
+
+  Regards.
+
+* Values within [% ... %] tags will be expanded
+
+* Simple example of a template directive
+
+* Basis of the direct marketing industry
+
+-
+
+=head1 The Template Toolkit
+
++>>
+
+* The Template Toolkit is a powerful templating engine written in Perl
+
+* Command line tools available
+
+* Other templating engines are available
+
++>>
+
+* Text::Template
+
+* HTML::Template
+
+* HTML::Mason
+
+-
+
+* We won't cover those
+
+-
+
+=head1 Why Choose The Template Toolkit
+
++>>
+
+* Not specialised for web use
+
++>>
+
+* Use the same tool for all of your templating needs
+
+-
+
+* Templating language is not Perl
+
++>>
+
+* Encourages separation of business logic and display logic
+
+* Don't need to be a Perl programmer to write templates
+
+-
+
+* Badgers are cool
+
+-
+
+=head1 Badgers Are Cool
+
+=img cover.png
+
+=head1 Form Letters Revisited
+
++>>
+
+* Remember the form letter template
+
+=item
+
+  Dear [% name %],
+
+  According to our records you owe us GBP [% amount %].
+  Please pay before [% due %] or we will send the boys
+  round.
+
+  Regards.
+
+* Process it using C<tpage>
+
+=item
+
+  tpage --define name='Mr Cross' --define amount='100' \
+        --define due='1st April' letter.tt
+
+* Writes to STDOUT
+-
+
+=head1 Form Letter Output
+
+  Dear Mr Cross,
+
+  According to our records you owe us GBP 100.
+
+  Please pay before 1st April or we will send the boys
+  round.
+
+  Regards.
+
+=head1 Tidying Up
+
++>>
+
+* We can use the FORMAT plugin to ensure that numbers are displayed to two decimal places
+
+=item
+
+  [% USE money=format('%.2f') -%]
+  Dear [% name %],
+
+  According to our records you owe us GBP [% money(amount) %].
+
+  Please pay before [% due %] or we will send the boys
+  round.
+  Regards.
+
+* We'll see more plugins later
+
+* Note: [% ... -%] - removes trailing whitespace
+
+-
+
+=head1 Reading Data from a File
+
++>>
+
+* Typing in every variable each time doesn't save us much time
+
+* What if the data was in a file?
+
+=item
+
+  name : amount : due
+  Mr Cross : 10 : 1st April
+  Mr Smith : 20 : 1st March
+  Mr Jones : 50 : 1st February
+
+=head1 The Datafile Plugin
+
++>>
+
+* Use the datafile plugin to read data from files
+
+=item 
+
+  [% USE money = format('%.2f') -%]
+  [% USE debtors = datafile(file) -%]
+  [% FOREACH debtor = debtors %]
+  Dear [% debtor.name %],
+  According to our records you owe us GBP [% money(debtor.amount) %]
+  Please pay before [% debtor.date %] or we will send the boys
+  round.
+  Regards.
+  [%- END %]
+
+* debtors variable is set from each row in file
+
+* Field names taken from the first row of data
+
+-
+
+=head1 Splitting the Output
+
++>>
+
+* Our output now has all letters running together
+
+* Use form feed character to separate them when printing
+
+=item
+
+  [% FOREACH debtor = debtors -%]
+  Blah blah blah...
+  [% UNLESS loop.last -%]
+  ^L
+  [%- END %]
+  [%- END %]
+
+* "unless" works as it does in Perl
+
+* "loop" is a special TT variable
+
+-
+
+=head1 Accessing a Database
+
++>>
+
+* The template doesn't get much more complex if the data is stored in a database
+
+* Use the DBI plugin
+
+=item 
+
+   [% USE money = format('%.2f') -%]
+   [% USE DBI(database = 'dbi:mysql:accounts'
+              username = 'acc_user'
+              password = 'sekrit') -%]
+   [% FOREACH debtor = DBI.query('select name, amount, due
+                                  from   debtors') -%]
+   Dear [% debtor.name %],
+   Blah blah blah...
+   [%- END %]
+
+* Most of the template is unchanged
+
+-
+
+=head1 Format Dates
+
++>>
+
+* Use the date plugin to format dates and times
+
+=item
+
+  [% USE date(format = '%d %B') -%]
+  ... and then later...
+  [% date.format(debtor.due) -%]
+
+* Input date either epoch seconds of h:m:s d/m/y
+
+=item
+
+  select name, amount
+         date_format(due, "%h:%i:%s %d/%m/%Y")
+           as due
+  from   debtors
+
+-
+
+=head1 Processing XML
+
++>>
+
+* Use XPath if your data is in XML
+
+=item
+
+  [% USE debtors = XML.XPath(file) -%]
+  [% FOREACH debtor = debtors.findnodes('/debtors/debtor') -%]
+  Dear [% debtor.findvalue('name') %],
+  Blah blah blah...
+  [%- END %]
+
+* Other XML processors are available
+
+-
+
+=head1 The Templating Equation
+
++>>
+
+* Templating can be expressed like this
+
+* Data + Fixed Text = Output
+
+* Form Letters look like this
+
++>>
+
+* Alternative Data + Fixed Text = Alternative Output
+
+-
+
+* We can also do this
+
++>>
+
+* Data + Alternative Fixed Text = Alternative Output
+
+* Different views of the same data
+
+-
+
+-
+
+=head1 An Aside: Objects in TT
+
++>>
+
+* Perl objects work really well with TT
+
+* Use plugins
+
+* TT plugin is a wrapper around external Perl code
+
+* Invoice example
+
++>>
+
+=item
+
+  use My::Invoice;
+
+  my $inv = My::Invoice->new($id);
+
+  print $inv->date, $inv->customer->name;
+
+-
+
+-
+
+=head1 An Aside: Template Plugins
+
++>>
+
+* From My::Invoice create a Template Plugin module
+
+* Template::Plugin::My::Invoice
+
+* Simple piece of boilerplate code
+
++>>
+
+* perldoc Template::Plugin
+
+-
+
+=item
+
+  [% USE inv = my.invoice(id) -%]
+  Date: [% inv.date %]
+  etc...
+
+=item
+
+  tpage --define id=123 inv.tt > inv.txt
+
+-
+
+=head1 Alternative Views of the Same Data
+
+ [% USE inv = my.invoice(id) -%]
+ INVOICE [% inv.id | format('%05d') %]
+
+ Date: [% inv.date %]
+    
+ To: [% inv.client.name %]
+     [% FOREACH addr_line = inv.client.address.split('\n') -%]
+     [% addr_line %]
+     [% END -%]
+
+ [% FOREACH line = inv.lines.sort('line_no') -%]
+ [% total = total + line.price -%]
+ [% line.description | format('%-40s') %] GBP [% line.price | format('%.2f') %]
+ [% END %]
+ [% 'Total:' | format('%40s') %] GBP [% total | format('%.2f') %]
+
+=head1 Alternative Views of the Same Data (2)
+
+  [% USE inv = my.invoice(id) -%]
+  <html>
+    <head><title>Invoice [% inv.id | format('%05d') %]</title></head>
+    <body>
+      <h1>INVOICE [% inv.id | format('%05d') %]</h1>
+      <table>
+        <tr>
+          <td>Date:</td><td>[% inv.invdate %]</td>
+        </tr>
+        <tr><td colspan="2">&nbsp;</td></tr>
+        <tr>
+          <td valign="top">To:</td>
+          <td>[% inv.client.name;
+                 inv.client.address.split('\n').join('<br>') -%]
+          </td>
+        </tr>
+      </table>
+
+=head1 Alternative Views of the Same Data (3)
+
+      <table>
+        [% FOREACH line = inv.lines.sort('line_no') -%]
+        <tr>
+          <td>[% line.description; total = total + line.price %]</td>
+          <td>GBP [% line.price | format('%.2f') %]</td>
+        </tr>
+        [% END %]
+        <tr>
+          <td align="right">Total:</td>
+          <td>EUR [% total | format('%.2f') %]</td>
+        </tr>
+      </table>
+    </body>
+  </html>
+
+=head1 More Information
+
++>>
+
+* perldoc Template::Manual (and many more)
+
+* http://tt2.org/
+
+* http://tt2.org/mailman/listinfo/templates
+
+* I<Perl Template Toolkit> (the badger book)
+
+* http://mag-sol.com/Articles/tpage.html
+
+-
+
+=cut
+
