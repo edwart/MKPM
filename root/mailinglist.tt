@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Mailing List</title>
+<link rel="stylesheet" type="text/css" href="static/site.css">
+<link rel="icon" href="favicon.ico">
+</head>
+<body>
+<h2>Mailing List</h2>
+
+<p>Please
+<a href="http://mail.pm.org/mailman/listinfo/miltonkeynes-pm" type="text/html"
+  title="Milton Keynes Perl Mongers Mailing List">join our mailing
+  list</a> and introduce yourself to others.  You can read <a
+  href="http://mail.pm.org/pipermail/miltonkeynes-pm/" type="text/html"
+  title="Milton Keynes Perl Mongers Mailing List Archives">the list's
+  archives</a> online.</p>
+
+</body>
+</html>

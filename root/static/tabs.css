@@ -1,0 +1,12 @@
+ol#tabs {
+    height: 2em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ol#tabs li {
+    background: #bdf url(static/images/tabs.gif);
+    float: left;
+    margin: 0 1px 0 0;
+    padding-left: 10px;
+}
