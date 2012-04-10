@@ -32,28 +32,28 @@
 
 # --- MakeMaker const_config section:
 
-# These definitions are from config.sh (via /Users/tony/perl5/perlbrew/perls/perl-5.14.2/lib/5.14.2/darwin-2level/Config.pm).
+# These definitions are from config.sh (via /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/5.14.2/x86_64-linux/Config.pm).
 # They may have been overridden via Makefile.PL or on the command line.
 AR = ar
 CC = cc
-CCCDLFLAGS =  
-CCDLFLAGS =  
-DLEXT = bundle
+CCCDLFLAGS = -fPIC
+CCDLFLAGS = -Wl,-E -Wl,-rpath,/home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/5.14.2/x86_64-linux/CORE
+DLEXT = so
 DLSRC = dl_dlopen.xs
 EXE_EXT = 
 FULL_AR = /usr/bin/ar
-LD = env MACOSX_DEPLOYMENT_TARGET=10.3 cc
-LDDLFLAGS =  -bundle -undefined dynamic_lookup -L/opt/local/lib -fstack-protector
-LDFLAGS =  -fstack-protector -L/opt/local/lib
-LIBC = 
+LD = cc
+LDDLFLAGS = -shared -O2 -L/usr/local/lib -fstack-protector
+LDFLAGS =  -fstack-protector -L/usr/local/lib
+LIBC = /lib/libc-2.5.so
 LIB_EXT = .a
 OBJ_EXT = .o
-OSNAME = darwin
-OSVERS = 11.2.0
-RANLIB = ranlib
-SITELIBEXP = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2
-SITEARCHEXP = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/darwin-2level
-SO = dylib
+OSNAME = linux
+OSVERS = 2.6.35.4
+RANLIB = :
+SITELIBEXP = /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2
+SITEARCHEXP = /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/x86_64-linux
+SO = so
 VENDORARCHEXP = 
 VENDORLIBEXP = 
 
@@ -82,55 +82,55 @@ MAN3EXT = 3
 INSTALLDIRS = site
 DESTDIR = 
 PREFIX = $(SITEPREFIX)
-PERLPREFIX = /Users/tony/perl5/perlbrew/perls/perl-5.14.2
-SITEPREFIX = /Users/tony/perl5/perlbrew/perls/perl-5.14.2
+PERLPREFIX = /home/tony/perl5/perlbrew/perls/perl-5.14.2
+SITEPREFIX = /home/tony/perl5/perlbrew/perls/perl-5.14.2
 VENDORPREFIX = 
-INSTALLPRIVLIB = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/lib/5.14.2
+INSTALLPRIVLIB = /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/5.14.2
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2
+INSTALLSITELIB = /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
 INSTALLVENDORLIB = 
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
-INSTALLARCHLIB = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/lib/5.14.2/darwin-2level
+INSTALLARCHLIB = /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/5.14.2/x86_64-linux
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/darwin-2level
+INSTALLSITEARCH = /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/x86_64-linux
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
 INSTALLVENDORARCH = 
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
-INSTALLBIN = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/bin
+INSTALLBIN = /home/tony/perl5/perlbrew/perls/perl-5.14.2/bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/bin
+INSTALLSITEBIN = /home/tony/perl5/perlbrew/perls/perl-5.14.2/bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
 INSTALLVENDORBIN = 
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/bin
+INSTALLSCRIPT = /home/tony/perl5/perlbrew/perls/perl-5.14.2/bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
-INSTALLSITESCRIPT = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/bin
+INSTALLSITESCRIPT = /home/tony/perl5/perlbrew/perls/perl-5.14.2/bin
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
 INSTALLVENDORSCRIPT = 
 DESTINSTALLVENDORSCRIPT = $(DESTDIR)$(INSTALLVENDORSCRIPT)
-INSTALLMAN1DIR = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/man/man1
+INSTALLMAN1DIR = /home/tony/perl5/perlbrew/perls/perl-5.14.2/man/man1
 DESTINSTALLMAN1DIR = $(DESTDIR)$(INSTALLMAN1DIR)
-INSTALLSITEMAN1DIR = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/man/man1
+INSTALLSITEMAN1DIR = /home/tony/perl5/perlbrew/perls/perl-5.14.2/man/man1
 DESTINSTALLSITEMAN1DIR = $(DESTDIR)$(INSTALLSITEMAN1DIR)
 INSTALLVENDORMAN1DIR = 
 DESTINSTALLVENDORMAN1DIR = $(DESTDIR)$(INSTALLVENDORMAN1DIR)
-INSTALLMAN3DIR = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/man/man3
+INSTALLMAN3DIR = /home/tony/perl5/perlbrew/perls/perl-5.14.2/man/man3
 DESTINSTALLMAN3DIR = $(DESTDIR)$(INSTALLMAN3DIR)
-INSTALLSITEMAN3DIR = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/man/man3
+INSTALLSITEMAN3DIR = /home/tony/perl5/perlbrew/perls/perl-5.14.2/man/man3
 DESTINSTALLSITEMAN3DIR = $(DESTDIR)$(INSTALLSITEMAN3DIR)
 INSTALLVENDORMAN3DIR = 
 DESTINSTALLVENDORMAN3DIR = $(DESTDIR)$(INSTALLVENDORMAN3DIR)
 PERL_LIB =
-PERL_ARCHLIB = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/lib/5.14.2/darwin-2level
+PERL_ARCHLIB = /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/5.14.2/x86_64-linux
 LIBPERL_A = libperl.a
 FIRST_MAKEFILE = Makefile
 MAKEFILE_OLD = Makefile.old
 MAKE_APERL_FILE = Makefile.aperl
 PERLMAINCC = $(CC)
-PERL_INC = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/lib/5.14.2/darwin-2level/CORE
-PERL = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/bin/perl "-Iinc"
-FULLPERL = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/bin/perl "-Iinc"
+PERL_INC = /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/5.14.2/x86_64-linux/CORE
+PERL = /home/tony/perl5/perlbrew/perls/perl-5.14.2/bin/perl "-Iinc"
+FULLPERL = /home/tony/perl5/perlbrew/perls/perl-5.14.2/bin/perl "-Iinc"
 ABSPERL = $(PERL)
 PERLRUN = $(PERL)
 FULLPERLRUN = $(FULLPERL)
@@ -143,7 +143,7 @@ PERM_DIR = 755
 PERM_RW = 644
 PERM_RWX = 755
 
-MAKEMAKER   = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/lib/5.14.2/ExtUtils/MakeMaker.pm
+MAKEMAKER   = /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/5.14.2/ExtUtils/MakeMaker.pm
 MM_VERSION  = 6.62
 MM_REVISION = 66200
 
@@ -173,9 +173,7 @@ MAN1PODS = script/mkpm_cgi.pl \
 	script/mkpm_server.pl \
 	script/mkpm_test.pl
 MAN3PODS = lib/MKPM.pm \
-	lib/MKPM/Controller/Hello.pm \
 	lib/MKPM/Controller/Root.pm \
-	lib/MKPM/Controller/Root/Root.pm \
 	lib/MKPM/View/TT.pm
 
 # Where is the Config information that we are using/depend on
@@ -199,19 +197,13 @@ PERL_ARCHIVE_AFTER =
 
 
 TO_INST_PM = lib/MKPM.pm \
-	lib/MKPM/Controller/Hello.pm \
 	lib/MKPM/Controller/Root.pm \
-	lib/MKPM/Controller/Root/Root.pm \
 	lib/MKPM/View/TT.pm
 
-PM_TO_BLIB = lib/MKPM/Controller/Root/Root.pm \
-	blib/lib/MKPM/Controller/Root/Root.pm \
-	lib/MKPM/Controller/Root.pm \
+PM_TO_BLIB = lib/MKPM/Controller/Root.pm \
 	blib/lib/MKPM/Controller/Root.pm \
 	lib/MKPM/View/TT.pm \
 	blib/lib/MKPM/View/TT.pm \
-	lib/MKPM/Controller/Hello.pm \
-	blib/lib/MKPM/Controller/Hello.pm \
 	lib/MKPM.pm \
 	blib/lib/MKPM.pm
 
@@ -267,7 +259,7 @@ makemakerdflt : all
 
 
 # --- MakeMaker dist section:
-TAR = COPY_EXTENDED_ATTRIBUTES_DISABLE=1 COPYFILE_DISABLE=1 tar
+TAR = tar
 TARFLAGS = cvf
 ZIP = zip
 ZIPFLAGS = -r
@@ -440,10 +432,8 @@ manifypods : pure_all  \
 	script/mkpm_cgi.pl \
 	script/mkpm_server.pl \
 	script/mkpm_fastcgi.pl \
-	lib/MKPM/Controller/Root/Root.pm \
 	lib/MKPM/Controller/Root.pm \
 	lib/MKPM/View/TT.pm \
-	lib/MKPM/Controller/Hello.pm \
 	lib/MKPM.pm
 	$(NOECHO) $(POD2MAN) --section=1 --perm_rw=$(PERM_RW) \
 	  script/mkpm_test.pl $(INST_MAN1DIR)/mkpm_test.pl.$(MAN1EXT) \
@@ -452,10 +442,8 @@ manifypods : pure_all  \
 	  script/mkpm_server.pl $(INST_MAN1DIR)/mkpm_server.pl.$(MAN1EXT) \
 	  script/mkpm_fastcgi.pl $(INST_MAN1DIR)/mkpm_fastcgi.pl.$(MAN1EXT) 
 	$(NOECHO) $(POD2MAN) --section=3 --perm_rw=$(PERM_RW) \
-	  lib/MKPM/Controller/Root/Root.pm $(INST_MAN3DIR)/MKPM::Controller::Root::Root.$(MAN3EXT) \
 	  lib/MKPM/Controller/Root.pm $(INST_MAN3DIR)/MKPM::Controller::Root.$(MAN3EXT) \
 	  lib/MKPM/View/TT.pm $(INST_MAN3DIR)/MKPM::View::TT.$(MAN3EXT) \
-	  lib/MKPM/Controller/Hello.pm $(INST_MAN3DIR)/MKPM::Controller::Hello.$(MAN3EXT) \
 	  lib/MKPM.pm $(INST_MAN3DIR)/MKPM.$(MAN3EXT) 
 
 
@@ -812,7 +800,7 @@ $(FIRST_MAKEFILE) : Makefile.PL $(CONFIGDEP)
 
 # --- MakeMaker makeaperl section ---
 MAP_TARGET    = perl
-FULLPERL      = /Users/tony/perl5/perlbrew/perls/perl-5.14.2/bin/perl
+FULLPERL      = /home/tony/perl5/perlbrew/perls/perl-5.14.2/bin/perl
 
 $(MAP_TARGET) :: static $(MAKE_APERL_FILE)
 	$(MAKE) $(USEMAKEFILE) $(MAKE_APERL_FILE) $@
@@ -868,7 +856,7 @@ ppd :
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Config::General" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Moose::" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="namespace::autoclean" />' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="darwin-2level-5.14" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="x86_64-linux-5.14" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <CODEBASE HREF="" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    </IMPLEMENTATION>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '</SOFTPKG>' >> $(DISTNAME).ppd
@@ -878,10 +866,8 @@ ppd :
 
 pm_to_blib : $(FIRST_MAKEFILE) $(TO_INST_PM)
 	$(NOECHO) $(ABSPERLRUN) -MExtUtils::Install -e 'pm_to_blib({@ARGV}, '\''$(INST_LIB)/auto'\'', q[$(PM_FILTER)], '\''$(PERM_DIR)'\'')' -- \
-	  lib/MKPM/Controller/Root/Root.pm blib/lib/MKPM/Controller/Root/Root.pm \
 	  lib/MKPM/Controller/Root.pm blib/lib/MKPM/Controller/Root.pm \
 	  lib/MKPM/View/TT.pm blib/lib/MKPM/View/TT.pm \
-	  lib/MKPM/Controller/Hello.pm blib/lib/MKPM/Controller/Hello.pm \
 	  lib/MKPM.pm blib/lib/MKPM.pm 
 	$(NOECHO) $(TOUCH) pm_to_blib
 
