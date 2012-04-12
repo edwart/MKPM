@@ -37,6 +37,7 @@ our $VERSION = '0.01';
 
 __PACKAGE__->config(
     name => 'MKPM',
+	default_view => 'TT',
     # Disable deprecated behavior needed by old applications
     disable_component_resolution_regex_fallback => 1,
     enable_catalyst_header => 1, # Send X-Catalyst header
@@ -64,7 +65,7 @@ L<MKPM::Controller::Root>, L<Catalyst>
 
 =head1 AUTHOR
 
-Catalyst developer
+Tony Edwardson
 
 =head1 LICENSE
 

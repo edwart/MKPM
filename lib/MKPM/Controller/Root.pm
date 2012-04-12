@@ -27,17 +27,7 @@ The root page (/)
 =cut
 
 sub index :Path :Args(0) {
-    my ( $self, $c, @args ) = @_;
-
-    # Hello World
-#    $c->response->body( $c->welcome_message );
-}
-
-sub welcome :Local :Args(0) {
     my ( $self, $c ) = @_;
-$c->forward('View::TT');
-    # Hello World
-#    $c->response->body( $c->welcome_message );
 }
 
 =head2 default
@@ -54,7 +44,7 @@ sub default :Path {
 
 =head2 end
 
-Attempt to render a view, if neede
+Attempt to render a view, if needed.
 
 =cut
 
@@ -62,7 +52,7 @@ sub end : ActionClass('RenderView') {}
 
 =head1 AUTHOR
 
-Catalyst developer
+Tony Edwardson
 
 =head1 LICENSE
 

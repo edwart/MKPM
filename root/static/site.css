@@ -6,7 +6,7 @@ body {
 
 #header {
   min-height: 199px;
-  background: url(images/cows.jpg) no-repeat #84ab52;
+  background: url(/static/images/cows.jpg) no-repeat #84ab52;
   color: inherit;
 }
 
