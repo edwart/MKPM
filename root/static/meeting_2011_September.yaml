@@ -1,0 +1,21 @@
+---
+- date: 'Tuesday, 6th September 2011'
+  desc: Our sixteenth technical meeting took place place
+  location: the Open University
+  month: September
+  talks:
+    - author: Colin Bradford
+      desc: ElasticSearch
+      href: static/talks/2011/09/elasticsearch.pdf
+      title: Colin's presentation on Elastic Search
+    - author: Tony Edwardson
+      desc: An Introduction to Perl6
+      href: static/talks/2011/09/perl6.pdf
+      title: Tony's presentation on Perl 6
+    - author: Tom Hukins
+      desc: Testing for Systems administration
+    - author: Tony Edwardson
+      desc: Managing Multiple Perl installations in your $HOME with App::perlbrew
+      href: static/talks/2011/09/perlbrew.pdf
+      title: Tony's presentation on App::perlbrew
+  year: 2011

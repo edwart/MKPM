@@ -1,0 +1,19 @@
+---
+- date: 'Tuesday, 15th June 2010'
+  desc: Our thirteenth technical meeting took place
+  location: the Open University
+  month: June
+  talks:
+    - author: Jon Allen
+      desc: Introduction to CouchDB
+      href: http://perl.jonallen.info/talks/couchdb-introduction
+      title: Slides for Jon's talk about CouchDB
+    - author: Paul Mooney
+      desc: Catalyst::Engine::Stomp and MooseX::Workers
+      href: static/talks/2010/06/paul_mooney_stomp_moosex_workers.pdf
+      title: Slides for Paul's talk about Catalyst::Engine::Stomp and MooseX::Workers
+    - author: Tony Edwardson
+      desc: Using What I Learned From Previous Technical Meetings
+      href: static/talks/2010/06/tony_edwardson_learning_from_previous_meetings.pdf
+      title: Slides for Tony's talk about learning from previous technical meetings
+  year: 2010

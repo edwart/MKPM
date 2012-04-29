@@ -1,0 +1,21 @@
+---
+- date: 'Tuesday, 13th June 2006'
+  desc: We held our second technical meeting
+  location: SpiraHellic Multimedia
+  month: June
+  talks:
+    - author: Peter Edwards
+      desc: 'Writing a perl/swig interface to the C++ CLucene search engine [slides as HTML or Powerpoint]'
+      href: http://perl.dragonstaff.co.uk/perlCLucene.ppt
+      title: ~
+    - author: Matt Trout
+      desc: Beautiful and Unique Snowflakes
+      href: http://shadowcatsystems.co.uk/static/cat-yapc/
+      title: Slides for Matt's talks
+    - author: Michael Lush
+      desc: Better Living Through Perl
+    - author: Tom Hukins
+      desc: Tracing Code with Aspect.pm
+      href: static/talks/2006/06/tom_hukins_tracing_aspect.pdf
+      title: Slides for Tracing Code with Aspect.pm (PDF)
+  year: 2006

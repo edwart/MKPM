@@ -1,0 +1,23 @@
+---
+- date: 'Tuesday, 9th February 2010'
+  desc: Our twelfth technical meeting took place
+  location: 'the Open University:'
+  month: February
+  talks:
+    - author: Ziya Suzen
+      desc: 'Practical Android Development - An Introduction'
+      href: static/talks/2010/02/ziya_suzen_android_development.pdf
+      title: Slides for Ziya's talk about Android development
+    - author: Oliver Gorwits
+      desc: 'conntrack, Netfilter, NetFlow and NAT under Linux'
+      href: static/talks/2010/02/oliver_gorwits_conntrack_netfilter_netflow_nat_linux.pdf
+      title: Slides for Oliver's talk about NAT on Linux
+    - author: Colin Bradford
+      desc: Using HTTP::Async for Parallel HTTP Requests
+      href: static/talks/2010/02/colin_bradford_http_async.pdf
+      title: Slides for Colin's talk about HTTP::Async
+    - author: Tom Hukins
+      desc: Do Repeat Yourself. Sometimes.
+      href: http://www.presentingperl.org/lpw2009/repeat-yourself/
+      title: Video of Tom's talk about repeating ideas
+  year: 2010

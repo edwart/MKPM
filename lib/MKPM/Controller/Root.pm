@@ -1,6 +1,8 @@
 package MKPM::Controller::Root;
 use Moose;
 use namespace::autoclean;
+use Data::Dumper;
+use FileHandle;
 
 BEGIN { extends 'Catalyst::Controller' }
 
@@ -28,6 +30,12 @@ The root page (/)
 
 sub index :Path :Args(0) {
     my ( $self, $c ) = @_;
+	our $talks;
+	do $ENV{HOME}.'/MKPM/root/static/talks.data';
+
+	$c->stash( talks => $talks,
+			   template => 'index.tt');
+	$c->forward( $c->view('TT') );
 }
 
 =head2 default

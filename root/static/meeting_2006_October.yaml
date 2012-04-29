@@ -1,0 +1,17 @@
+---
+- date: 'Tuesday, 10th October 2006'
+  desc: Our third technical meeting took place
+  location: SpiraHellic Multimedia
+  month: October
+  talks:
+    - author: Lee Larcombe
+      desc: 'Doing something useful with the secrets of life: structural bioinformatics'
+      href: static/talks/2006/10/lee_structural_bix.pdf
+      title: Slides for Doing something useful with the secrets of life (PDF)
+    - author: Robbie Bow
+      desc: Playing Games
+    - author: Tom Hukins
+      desc: What I learned at YAPC Europe
+      href: static/talks/2006/10/learned_at_yapc.pdf
+      title: Slides for What I learned at YAPC Europe (PDF)
+  year: 2006

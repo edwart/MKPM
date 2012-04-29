@@ -1,0 +1,27 @@
+---
+- date: 'Monday, 8th October 2008'
+  desc: We held our seventh technical meeting
+  location: the Open University
+  month: October
+  talks:
+    - author: Dave Cross
+      desc: Perl in RPM Land
+      href: static/talks/2008/09/dave_cross_perl_in_rpm_land.pdf
+      title: Slides for Perl in RPM Land
+    - author: Robbie Bow
+      desc: SQL and MySQL
+      href: static/talks/2008/09/robbie_bow_sql_and_mysql.pdf
+      title: Slides for SQL and MySQL (PDF)
+    - author: Barbie
+      desc: Testing With Perl
+      href: http://birmingham.pm.org/talks/barbie/perltest2/
+      title: Slides to Testing With Perl (HTML)
+    - author: Robbie Bow
+      desc: Robbie's Little Helpers
+      href: static/talks/2008/09/robbie_bow_little_helpers.pdf
+      title: Slides for Robbie's Little Helpers (PDF)
+    - author: Tom Hukins
+      desc: Logging with Perl
+      href: static/talks/2008/09/tom_hukins_logging_with_perl.pdf
+      title: Slides for Logging with Perl (PDF)
+  year: 2008

@@ -1,0 +1,945 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Databases and Perl</title>
+<!-- metadata -->
+<meta name="generator" content="spod5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="Milton Keynes Perl Mongers / 14th Mar 2006" />
+<meta name="author" content="Dave Cross <dave@dave.org.uk>" />
+<meta name="company" content="" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/tpf/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/tpf/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/tpf/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/tpf/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="ui/tpf/slides.js" type="text/javascript"></script>
+
+<style type="text/css">
+<!--
+/* 
+ * perltidy's styles
+ */
+.c  { color: #228B22;                    } /* comment */
+.cm { color: #000000;                    } /* comma */
+.co { color: #000000;                    } /* colon */
+.h  { color: #CD5555; font-weight:bold;  } /* here-doc-target */
+.hh { color: #CD5555; font-style:italic; } /* here-doc-text */
+.i  { color: #00688B;                    } /* identifier */
+.j  { color: #000000; font-weight:bold;  } /* label */
+.k  { color: #8B4513; font-weight:bold;  } /* keyword */
+.m  { color: #FF0000; font-weight:bold;  } /* subroutine */
+.n  { color: #B452CD;                    } /* numeric */
+.p  { color: #000000;                    } /* paren */
+.pd { color: #228B22; font-style:italic; } /* pod-text */
+.pu { color: #000000;                    } /* punctuation */
+.q  { color: #CD5555;                    } /* quote */
+.s  { color: #000000;                    } /* structure */
+.sc { color: #000000;                    } /* semicolon */
+.v  { color: #B452CD;                    } /* v-string */
+.w  { color: #000000;                    } /* bareword */
+
+/* ====================================================================== *
+ * Sample stylesheet for Syntax::Highlight::HTML                          *
+ *                                                                        *
+ * Copyright (C)2004 Sebastien Aperghis-Tramoni, All Rights Reserved.     *
+ *                                                                        *
+ * This file is free software; you can redistribute it and/or modify      *
+ * it under the same terms as Perl itself.                                *
+ * ====================================================================== */
+
+.h-decl { color: #336699; font-style: italic; }   /* doctype declaration  */
+.h-pi   { color: #336699;                     }   /* process instruction  */
+.h-com  { color: #338833; font-style: italic; }   /* comment              */
+.h-ab   { color: #000000; font-weight: bold;  }   /* angles as tag delim. */
+.h-tag  { color: #993399; font-weight: bold;  }   /* tag name             */
+.h-attr { color: #000000; font-weight: bold;  }   /* attribute name       */
+.h-attv { color: #333399;                     }   /* attribute value      */
+.h-ent  { color: #cc3333;                     }   /* entity               */
+
+.h-lno  { color: #cccccc; background: #eee;   }   /* line numbers         */
+-->
+</style>
+
+
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Milton Keynes Perl Mongers / 14th Mar 2006</h1>
+<h2>Databases and Perl</h2>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+
+<h1>Databases and Perl</h1>
+<h3>Dave Cross <dave@dave.org.uk></h3>
+<h4></h4>
+
+</div>
+
+<div class="slide">
+<h1>Databases and Perl</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Data is important</p>
+</li>
+<li>
+<p>Databases are important</p>
+</li>
+<li>
+<p>A large proportion of Perl programs need to write to and/or read from databases</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>DBI.pm</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>The basis for all modern Perl database access</p>
+</li>
+<li>
+<p>You should be using DBI (or something based on DBI)</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>How DBI Works</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Program uses DBI.pm</p>
+</li>
+<li>
+<p>Create a connection to a particular type of database</p>
+</li>
+<li>
+<p>DBD module gets loaded</p>
+</li>
+<li>
+<p>DBD translates from DBI API to database specific calls</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>How DBI Works (Diagram)</h1>
+<div class="slidecontent">
+<table width="50%" align="center" border="1">
+<tr><th>DBI</th></tr>
+<tr><th>DBD</th></tr>
+<tr><th>Database API</th></tr>
+<tr><th>Database</th></tr>
+</table>
+
+</div></div>
+<div class="slide">
+<h1>How DBI Works (Code)</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<pre>  use DBI;</pre>
+
+<pre>  my $dbh = DBI-&gt;connect("dbi:mysql:$some_stuff",
+                         $user, $pass);</pre>
+
+</li>
+<li>
+<p>In theory you can port a program to another database</p>
+</li>
+<li>
+<p>Just change the connection line</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Selecting Data</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Prepare the SQL statement</p>
+</li>
+<li>
+<pre>  my $sth = $dbh-&gt;prepare('select name, genre
+                           from   artist');</pre>
+
+</li>
+<li>
+<pre>  my $sth = $dbh-&gt;prepare("select title,
+                           from   song
+                           where  artist = '$id'");</pre>
+
+</li>
+<li>
+<p>Check return values (syntax errors)</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Selecting Data</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Execute the statement</p>
+</li>
+<li>
+<pre>  $sth-&gt;execute</pre>
+
+</li>
+<li>
+<p>Still need to check for errors</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Selecting Data</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Fetch the returned data</p>
+</li>
+<li>
+<pre>  while (my @row = $sth-&gt;fetchrow_array) {
+    print "@row\n";
+  }</pre>
+
+</li>
+<li>
+<p>Fields are returned in the same order as they are defined in the query</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Selecting Data</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Other fetch methods are available:</p>
+<ul class="incremental">
+<li>
+<p>fetchrow_arrayref</p>
+</li>
+<li>
+<p>fetchrow_hashref (keys are column names)</p>
+</li>
+<li>
+<p>fetchall_arrayref</p>
+</li>
+<li>
+<p>fetch (alias for fetchrow_arrayref)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Many more added each week</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Some Caveats</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>If you're using a fetch method that returns an array</p>
+<ul class="incremental">
+<li>
+<p>Never use "select *"</p>
+</li>
+<li>
+<p>For (hopefully) obvious reasons</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If you're using a fetch method that returns a hash</p>
+<ul class="incremental">
+<li>
+<p>Ensure all your columns have (unique) names</p>
+</li>
+<li>
+<p>For (hopefully) obvious reasons</p>
+</li>
+</ul>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Inserting, Updating &amp; Deleting Data</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Statements that don't return data can be executed the same way</p>
+</li>
+<li>
+<pre>  my $sql = "update table1 set col1 = '$val'
+             where id_col = $id"; </pre>
+
+<pre>  my $sth  = $dbh-&gt;prepare($sql);</pre>
+
+<pre>  $sth-&gt;execute;</pre>
+
+</li>
+<li>
+<p>But there's a shortcut</p>
+</li>
+<li>
+<pre>  $rows = $dbh-&gt;do($sql);</pre>
+
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Binding Data</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<pre>  while (&lt;FILE&gt;) {
+    chomp;
+    my @data = split;</pre>
+
+<pre>    my $sql = "insert tab values ($data[0],
+                                  $data[1],
+                                  $data[2])";</pre>
+
+<pre>    $dbh-&gt;do($sql);
+  }</pre>
+
+</li>
+<li>
+<p>Recompiles the SQL every time</p>
+</li>
+<li>
+<p>Very inefficient</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Binding Data</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Prepare statement once, use many times</p>
+</li>
+<li>
+<pre>  my $sql = "insert tab values (?, ?, ?)";</pre>
+
+<pre>  my $sth = $dbh-&gt;prepare($sql);</pre>
+
+<pre>  while (&lt;FILE&gt;) {
+    my @data = split;</pre>
+
+<pre>    bind_param(1, $data[0]);
+    bind_param(2, $data[1]);
+    bind_param(3, $data[2]);</pre>
+
+<pre>    $sth-&gt;execute;
+  }</pre>
+
+</li>
+<li>
+<p>Bonus - binding handles quoting for you</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Binding Data</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Even easier - extra parameters to <code>execute</code></p>
+</li>
+<li>
+<pre>  my $sql = "insert tab
+             values (?, ?, ?)";</pre>
+
+<pre>  my $sth = $dbh-&gt;prepare($sql);</pre>
+
+<pre>  while (&lt;FILE&gt;) {
+    chomp;</pre>
+
+<pre>    my @data = split;</pre>
+
+<pre>    $sth-&gt;execute(@data);
+  }</pre>
+
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Binding by Name</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Having unnamed placeholders can get confusing</p>
+</li>
+<li>
+<pre>  my $sql = 'insert into complex_table
+             values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
+                     ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
+                     ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';</pre>
+
+</li>
+<li>
+<p>Good chance of getting the variables in the wrong order</p>
+</li>
+<li>
+<p>By the way - there's a basic maintainability error in that SQL</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Binding by Name</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Bind by name instead</p>
+</li>
+<li>
+<pre>  my $sql = 'insert into complex_table
+                    (id, code, name, addr, email, url
+                     # etc, etc
+                    )
+             values (:id, :code, :name, :addr, :email, :url,
+                      # etc, etc
+                    );</pre>
+
+<pre>  my $sth = $sql-&gt;prepare($sql);</pre>
+
+<pre>  $sth-&gt;bind_param(':id', $id);
+  $sth-&gt;bind_param(':code', $code);
+  # etc</pre>
+
+<pre>  $sth-&gt;execute;</pre>
+
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Even Easier Binding by Name</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Store your data in a hash</p>
+</li>
+<li>
+<pre>  my %complex_data = (id   =&gt; 42,
+                      code =&gt; 'H2G2',
+                      # etc
+                      );</pre>
+
+<pre>  # and later...
+  foreach my $col (keys %complex_data) {
+    $sth-&gt;bind_param(":$col", $complex_data{$col};
+  }</pre>
+
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Downside of Binding by Name</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Most DBDs don't support it</p>
+</li>
+<li>
+<p>Which is a bit of a bugger</p>
+</li>
+<li>
+<p>Oracle does</p>
+</li>
+<li>
+<p>So does PostgreSQL (tho' the docs discourage its use)</p>
+</li>
+<li>
+<p>Check your DBD documentation</p>
+</li>
+<li>
+<p>Email your friendly neighbourhood DBD author</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Some Tips</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Make your life as easy as possible</p>
+</li>
+<li>
+<p>Don't hard-code connection data</p>
+<ul class="incremental">
+<li>
+<p>Config file, command line options, environment variables</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Send all of your data access through one function</p>
+</li>
+<li>
+<p>Store SQL queries externally and reference them by name</p>
+</li>
+<li>
+<p>(Use named parameters if you can)</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Sample Code</h1>
+<div class="slidecontent">
+<pre>  my $dbh;</pre>
+
+<pre>  sub run_sql {
+    my ($sql_statement, %args) = @_;</pre>
+
+<pre>    my $sql = get_sql($sql_statement);</pre>
+
+<pre>    $dbh = get_dbh() unless $dbh;</pre>
+
+<pre>    my $sth = $dbh-&gt;prepare($sql);</pre>
+
+<pre>    foreach my $col (keys %args) {
+      $sth-&gt;bind_param(":$col", $args{$col});
+    }</pre>
+
+<pre>    return $sth-&gt;execute;
+  }</pre>
+
+</div></div>
+<div class="slide">
+<h1>Who Hates SQL?</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>SQL is tedious to write</p>
+</li>
+<li>
+<p>Most SQL isn't hard</p>
+</li>
+<li>
+<p>Most SQL is really predictable</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Predictable SQL</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Select the id and name from this table</p>
+</li>
+<li>
+<p>Select all the details of this row</p>
+</li>
+<li>
+<p>Select something about related tables</p>
+</li>
+<li>
+<p>Update this row with these values</p>
+</li>
+<li>
+<p>Insert a new record with these values</p>
+</li>
+<li>
+<p>Delete this record</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Introducing Class::DBI</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Class::DBI allows you to write code like this</p>
+</li>
+<li>
+<pre>  use Music::Artist;</pre>
+
+<pre>  foreach my $art (Music::Artist-&gt;retrieve_all) {
+    print $art-&gt;id, ' ', $art-&gt;name, "\n";
+  }</pre>
+
+</li>
+<li>
+<p>Or like this</p>
+</li>
+<li>
+<pre>  my $art = Music::Artist-&gt;retrieve($id);
+  if ($art) {
+    foreach my $song ($art-&gt;songs) {
+      print $song-&gt;title, "\n";
+    }
+  }</pre>
+
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>More Class::DBI Examples</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Update an object</p>
+</li>
+<li>
+<pre>  $art-&gt;name('Archduke Ferdinand');
+  $foo-&gt;update;</pre>
+
+</li>
+<li>
+<p>Insert an object</p>
+</li>
+<li>
+<pre>  $art = Music::Artist-&gt;insert(\%new_art);</pre>
+
+</li>
+<li>
+<p>How about this</p>
+</li>
+<li>
+<pre>  $art = Music::Artist-&gt;find_or_create(\%new_art);</pre>
+
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>More Class::DBI::Examples</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Deleting an object</p>
+</li>
+<li>
+<pre>  $celine_dion-&gt;delete;</pre>
+
+</li>
+<li>
+<p>Deleting many objects</p>
+</li>
+<li>
+<pre>  Music::Artist-&gt;search(genre =&gt; 'Rap')-&gt;delete_all;</pre>
+
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>The Man Behind the Curtain</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Class::DBI is an Object Relational Mapper</p>
+</li>
+<li>
+<p>It maps a relational database table onto a class</p>
+</li>
+<li>
+<p>It maps a relational database row onto an object</p>
+</li>
+<li>
+<p>You tell it about your database tables</p>
+</li>
+<li>
+<p>It creates the SQL</p>
+<ul class="incremental">
+<li>
+<p>For the most common cases</p>
+</li>
+</ul>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>A Class::DBI Class</h1>
+<div class="slidecontent">
+<pre>  package Music::DBI;
+  use base 'Class::DBI';
+  # Don't hard-code these!!
+  Music::DBI-&gt;connection('dbi:mysql:musicdb', 'username',
+                         'password');</pre>
+
+<pre>  package Music::Artist;
+  use base 'Music::DBI';
+  Music::Artist-&gt;table('artist');
+  Music::Artist-&gt;columns(All =&gt; qw/id name genre/);
+  Music::Artist-&gt;has_many(songs =&gt; 'Music::Song');</pre>
+
+<pre>  package Music::Song;
+  use base 'Music::DBI';
+  Music::Song-&gt;table('song');
+  Music::Song-&gt;columns(All =&gt; qw/id title artist/);
+  Music::Song-&gt;has_a(artist =&gt; 'Music::Artist');</pre>
+
+</div></div>
+<div class="slide">
+<h1>Other Class::DBI Features</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Inflate attributes to objects</p>
+</li>
+<li>
+<p>Triggers before/after events</p>
+</li>
+<li>
+<p>Constraints</p>
+</li>
+<li>
+<p>Define your own SQL</p>
+</li>
+<li>
+<p>Class::DBI::FromCGI &amp; Class::DBI::AsForm</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Improving on Class::DBI</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Class::DBI makes life a lot easier</p>
+</li>
+<li>
+<p>You very rarely need to type actual SQL</p>
+</li>
+<li>
+<p>Laziness is a virtue</p>
+</li>
+<li>
+<p>Therefore more laziness is better</p>
+</li>
+<li>
+<p>Let's take another look at that class definition</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>A Class::DBI Class</h1>
+<div class="slidecontent">
+<pre>  package Music::DBI;
+  use base 'Class::DBI';
+  # Don't hard-code these!!
+  Music::DBI-&gt;connection('dbi:mysql:musicdb', 'username',
+                         'password');</pre>
+
+<pre>  package Music::Artist;
+  use base 'Music::DBI';
+  Music::Artist-&gt;table('artist');
+  Music::Artist-&gt;columns(All =&gt; qw/id name genre/);
+  Music::Artist-&gt;has_many(songs =&gt; 'Music::Song');</pre>
+
+<pre>  package Music::Song;
+  use base 'Music::DBI';
+  Music::Song-&gt;table('song');
+  Music::Song-&gt;columns(All =&gt; qw/id title artist/);
+  Music::Song-&gt;has_a(artist =&gt; 'Music::Artist');</pre>
+
+</div></div>
+<div class="slide">
+<h1>More Laziness Needed</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Bear in mind this is a <b>very</b> simple system</p>
+</li>
+<li>
+<p>You'll usually need a lot more tables with a lot more columns</p>
+</li>
+<li>
+<p>We specify the relations twice (once in each direction)</p>
+</li>
+<li>
+<p>We specify all of the column names</p>
+</li>
+<li>
+<p>We specify the table name</p>
+</li>
+<li>
+<p>We have already entered all this information once</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Database Metadata</h1>
+<div class="slidecontent">
+<pre>  CREATE TABLE artist (
+    id     INTEGER PRIMARY KEY AUTO_INCREMENT,
+    name   VARCHAR(50),
+    genre  VARCHAR(5)
+  );</pre>
+
+<pre>  CREATE TABLE song (
+    id     INTEGER PRIMARY KEY AUTO_INCREMENT,
+    title  VARCHAR(50),
+    artist INTEGER FOREIGN KEY REFERENCES artist(id)
+  );</pre>
+
+</div></div>
+<div class="slide">
+<h1>Don't Repeat Yourself</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<pre>  CREATE TABLE song (
+    id     INTEGER PRIMARY KEY AUTO_INCREMENT,
+    title  VARCHAR(50),
+    artist INTEGER FOREIGN KEY REFERENCES artist(id)
+  );</pre>
+
+</li>
+<li>
+<pre>  package Music::Song;
+  use base 'Music::DBI';
+  Music::Song-&gt;table('song');
+  Music::Artist-&gt;columns(All =&gt; qw/id title artist/);
+  Music::Artist-&gt;has_a(artist =&gt; 'Music::Artist');</pre>
+
+</li>
+<li>
+<p>Repetition is bad</p>
+</li>
+<li>
+<p>Don't do it (unless you absolutely have to)</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Class::DBI::Loader</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Most of the information we need to build the class is already in the database metadata</p>
+</li>
+<li>
+<p>Let's let the computer do all that tedious work</p>
+</li>
+<li>
+<p>We'll just step in if it needs our help</p>
+</li>
+<li>
+<p>Class::DBI::Loader does this for us</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>A Class::DBI::Loader Class</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<pre>  package Music;</pre>
+
+<pre>  use Class::DBI::Loader;</pre>
+
+<pre>  Class::DBI::Loader-&gt;new(dsn           =&gt; 'dbi:mysql:musicdb',
+                          user          =&gt; 'username',
+                          password      =&gt; 'password',
+                          relationships =&gt; 1,
+                          namespace     =&gt; 'Music');</pre>
+
+</li>
+<li>
+<p>Scans the database and creates objects as appropriate</p>
+</li>
+<li>
+<p>An object for each table (name based on table name and namespace)</p>
+</li>
+<li>
+<p>Attributes for each column</p>
+</li>
+<li>
+<p>Relationships for each foreign key</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Advantages of Class::DBI::Loader</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Makes it very easy to get simple database systems up quickly</p>
+</li>
+<li>
+<p>No need to repeat database metadata</p>
+</li>
+<li>
+<p>No need to write simple SQL</p>
+</li>
+<li>
+<p>Power to override default behaviour when required</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Other ORM Systems Are Available</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Class::Persist</p>
+</li>
+<li>
+<p>DBIx::Class</p>
+</li>
+<li>
+<p>Tangram</p>
+</li>
+<li>
+<p>SPOPS</p>
+</li>
+<li>
+<p>Alzabo</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Further Information</h1>
+<div class="slidecontent">
+<ul class="incremental">
+<li>
+<p>Module documentation (CPAN)</p>
+</li>
+<li>
+<p><i>Programming the Perl DBI</i> - Tim Bunce</p>
+</li>
+<li>
+<p><a href="http://dbi.perl.org/">http://dbi.perl.org/</a></p>
+</li>
+<li>
+<p><a href="http://class-dbi.com/">http://class-dbi.com/</a></p>
+</li>
+<li>
+<p><i>Advanced Perl Programming</i> - Simon Cozens</p>
+</li>
+</ul>
+</div></div>
+<div class="slide">
+<h1>Databases and Perl</h1>
+<div class="slidecontent">
+<ul>
+<li>
+<p>Any Questions?</p>
+</li>
+</ul>
+</div></div>
+
+
+</div>
+
+</body>
+</html>

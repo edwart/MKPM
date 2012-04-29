@@ -1,0 +1,27 @@
+---
+- date: 'Thursday, 15th October 2009'
+  desc: Our eleventh technical meeting took place
+  location: 'the Open University:'
+  month: October
+  talks:
+    - author: Dave Cross
+      desc: 'Teaching Perl - Experiences, Anecdotes and Vague Conclusions'
+      href: http://www.slideshare.net/davorg/perl-training
+      title: Slides for Dave's talk about Teaching Perl
+    - author: Dave Cross
+      desc: How I Maintain my CPAN Modules
+      href: http://www.slideshare.net/davorg/cpan-module-maintenance-2243226
+      title: Slides for Dave's talk about Maintaining CPAN Modules
+    - author: Katherine Spice
+      desc: Load Balancing with Perlbal
+      href: static/talks/2009/10/katherine_spice_perlbal.pdf
+      title: Slides for Katherine's talk about Perlbal
+    - author: Tony Edwardson
+      desc: Using Moose to Build Object Oriented Applications
+      href: static/talks/2009/10/tony_edwardson_moose.pdf
+      title: Slides for Tony's talk about Moose
+    - author: Benjamin Martin
+      desc: A New User's Perspective on Catalyst
+      href: static/talks/2009/10/benjamin_martin_catalyst.pdf
+      title: Slides for Benjamin's talk about Catalyst
+  year: 2009

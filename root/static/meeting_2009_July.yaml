@@ -1,0 +1,23 @@
+---
+- date: 'Tuesday, 14th July 2009'
+  desc: Our tenth technical meeting took place
+  location: 'the Open University:'
+  month: July
+  talks:
+    - author: Colin Bradford
+      desc: 'Data Warehousing with Perl: Archiving and analysing large data sets from a popular online business'
+      href: static/talks/2009/07/colin_bradford_data_warehousing.pdf
+      title: Slides for Colin's talk about Data Warehousing with Perl
+    - author: Oliver Gorwits
+      desc: Using local::lib to let users manage modules without needing root access
+      href: static/talks/2009/07/oliver_gorwits_local_lib.pdf
+      title: Slides for Oliver's talk about local::lib
+    - author: Matt Trout
+      desc: 'The future of DBIx::Class, a database object relational mapper for Perl'
+      href: http://shadowcat.co.uk/catalyst/talks/-npw-2009/future-of-dbix-class.xul
+      title: XUL Presentation of Matt's talk for Mozilla based browsers
+    - author: Ian Cameron
+      desc: 'Using WWW::Mechanize to automate interacting with Web sites, from the perspective of a non-Perl programmer'
+    - author: Tony Edwardson
+      desc: Managing database queries with SQL::Library
+  year: 2009

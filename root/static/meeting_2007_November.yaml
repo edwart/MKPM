@@ -1,0 +1,15 @@
+---
+- date: 'Thursday, 15th November 2007'
+  desc: Our fifth technical meeting took place
+  location: the Open University
+  month: November
+  talks:
+    - author: Dave Cross
+      desc: An Introduction to the Template Toolkit
+      href: static/talks/2007/11/dave_cross_tt_intro/
+      title: Slides for Introduction to Template Toolkit (HTML)
+    - author: Adam Lowe
+      desc: Projects at the National Museum of Computing
+      href: http://www.tnmoc.co.uk/
+      title: The National Museum of Computing's Web Site
+  year: 2007

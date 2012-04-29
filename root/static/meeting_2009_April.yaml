@@ -1,0 +1,19 @@
+---
+- date: 'Thursday, 16th April 2009'
+  desc: We held our ninth technical meeting
+  location: the Open University
+  month: April
+  talks:
+    - author: Colin Bradford
+      desc: Distributed caching with memcached to improve performance and scale web applications
+      href: static/talks/2009/04/colin_bradford_memcached.pdf
+      title: Slides for Colin's talk about memcached
+    - author: Peter Edwards
+      desc: Developing cross platform GUI applications with WxWidgets
+      href: http://perl.dragonstaff.co.uk/mkpm_wxwidgets.pdf
+      title: Slides for Peter's talk about WxWidgets
+    - author: Tony Edwardson
+      desc: 'Moose - the new way to use Object orientation from Perl 5'
+      href: static/talks/2009/04/tony_edwardson_moose_introduction.pdf
+      title: Slides for Tony's talk about Moose
+  year: 2009

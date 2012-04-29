@@ -1,0 +1,17 @@
+---
+- date: 'Monday, 2nd April 2007'
+  desc: Our fourth technical meeting took place
+  location: the Open University
+  month: April
+  talks:
+    - author: Peter Edwards
+      desc: Desperately Seeking a Lightweight Perl web Framework
+      href: http://perl.dragonstaff.co.uk/mkpm2/index.htm
+      title: Talk Slides (HTML)
+    - author: Tom Hukins
+      desc: Testing When You Don't Have Time
+    - author: Barbie
+      desc: 'Selenium - An Introduction to Web testing'
+      href: http://birmingham.pm.org/talks/barbie/selenium/
+      title: Talk Slides (HTML)
+  year: 2007

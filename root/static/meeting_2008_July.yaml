@@ -1,0 +1,23 @@
+---
+- date: 'Tuesday, 8th July 2008'
+  desc: Our sixth technical meeting took place
+  location: the Open University
+  month: July
+  talks:
+    - author: Tom Hukins
+      desc: An Introduction to DBIx::Class
+      href: static/talks/2008/07/tom_hukins_dbix_class_introduction.pdf
+      title: Slides for An Introduction to DBIx::Class (PDF)
+    - author: Peter Edwards
+      desc: Real Life Cross-Platform Testing
+      href: http://perl.dragonstaff.co.uk/mkpm3/real_world_xplatform_testing_files/frame.htm
+      title: Slides for Real Life Cross-Platform Testing (HTML saved from Powerpoint)
+    - author: Tony Edwardson
+      desc: Source Filters
+      href: static/talks/2008/07/tony_edwardson_source_filters.pdf
+      title: Slides for Source Filters (PDF)
+    - author: Oliver Gorwits
+      desc: What I Did On My Holidays
+      href: static/talks/2008/07/oliver_gorwits_holiday.pdf
+      title: Slides for What I Did On My Holidays (PDF)
+  year: 2008

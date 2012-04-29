@@ -1,8 +1,58 @@
 [% WRAPPER page.tt title = c.config.name ; END %]
-  <div id="header">
+<body>
+<div id="header">
     <h1>Milton Keynes Perl Mongers</h1>
-  </div>
+</div>
 
+<div id="myslidemenu" class="jqueryslidemenu">
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/talks">Talks</a>
+    <ul>
+        <li><a href="/talks">By Date</a>
+            <ul>
+            [% FOREACH year IN talks.by_date.keys.sort -%]
+                <li><a href="#">[% year %]</a>
+                <ul>
+                [% FOREACH month IN talks.by_date.$year.keys.nsort -%]
+                    <li><a href="#">[% talks.by_date.$year.$month.month %]</a>
+                    <ul>
+                    [% FOREACH talk IN talks.by_date.$year.$month.talks -%]
+                        <li><a href="[% talk.href %]" target="_blank">[% talk.author %] - [% talk.desc %]</a></li>
+                    [% END -%]
+                    </ul>
+                    </li>
+                [% END -%]
+                </ul>
+                </li>
+            [% END -%]
+            </ul>
+        </li>
+        <li><a href="/talks">By Author</a>
+            <ul>
+            [% FOREACH author IN talks.by_author.keys.sort %]
+                <li><a href="#">[% author %]</a>
+                <ul>
+                [% FOREACH year IN talks.by_author.$author.keys.sort %]
+                [% FOREACH month IN talks.by_author.$author.$year.keys.sort %]
+                    <li><a href="#" target="_blank">[% months.$month %] [% year %]</a>
+                    <ul>
+                    [% FOREACH talk IN talks.by_author.$author.$year.$month %]
+                        <li><a href="[% talk.href %]" target="_blank">[% talk.Description %]</a></li>
+                    [% END %]
+                    </ul>
+                    </li>
+                [% END %]
+                [% END %]
+                </ul>
+                </li>
+            [% END %]
+        </ul>
+    </ul>
+</ul>
+<br style="clear: left" />
+</div>
   <p>Welcome to Milton Keynes Perl Mongers.  This
 group exists for anyone in or near to Milton Keynes to have fun learning
 about the Perl computer programming language.</p>
@@ -11,221 +61,5 @@ about the Perl computer programming language.</p>
 exists for everyone from complete beginners to experienced
 developers.</p>
 
-<h2>Mailing List</h2>
-
-<p>Please
-<a href="http://mail.pm.org/mailman/listinfo/miltonkeynes-pm" type="text/html"
-  title="Milton Keynes Perl Mongers Mailing List">join our mailing
-  list</a> and introduce yourself to others.  You can read <a
-  href="http://mail.pm.org/pipermail/miltonkeynes-pm/" type="text/html"
-  title="Milton Keynes Perl Mongers Mailing List Archives">the list's
-  archives</a> online.</p>
-
-<h2>IRC</h2>
-
-<p>If you use <abbr title="Internet Relay Chat">IRC</abbr>, join us at
-#miltonkeynes.pm on <a href="http://www.irc.perl.org/" title="Details of the Perl IRC network">irc.perl.org</a>.</p>
-
-<h2>Forthcoming Meetings</h2>
-
-<p>We hold social meetings on the second to last Tuesday of every month where we get together in a pub and talk about various Perl and non-Perl things.</p>
-
-<p>Please subscribe to our mailing list or join our IRC channel to keep up to date with meeting announcements.</p>
-
-<p>
-If you're visiting Milton Keynes and would like to meet up with us, or if you'd like to arrange an impromptu meeting for any reason, please introduce yourself on the mailing list or IRC.
-</p>
-
-<h3>Next Social Meeting</h3>
-
-<p>Our next social meeting will take place on Tuesday, 17th April 2012 at <a href="http://miltonkeynes.openguides.org/?J.D_Wetherspoon%2C_Central_Milton_Keynes" title="J D Wetherspoon in the Open Guide to Milton Keynes" type="text/html">Wetherspoon's in Central Milton Keynes</a>.  Please come along and say hello.</p>
-
-<h3>Next Technical Meeting</h3>
-<p>Our next technical meeting is tentatively scheduled for May 1st, at the Open University.  Chat on the mailing list, or IRC, for more information.</p>
-
-<div>
-<h2>Previous Meetings</h2>
-<p>Our sixteenth technical meeting took place place on Tuesday, 6th September 2011, and featured the following talks:</p>
-<ul>
-    <li><a href="talks/2011/11/elasticsearch.pdf" type="text/pdf" title="Colin's presentation on Elastic Search">ElasticSearch</a> (Colin Bradford)</li>
-    <li><a href="talks/2011/11/perl6.pdf" type="text/pdf" title="Tony's presentation on Perl 6">An Introduction to Perl6</a> (Tony Edwardson)</li>
-    <li>Testing for Systems administration (Tom Hukins)</li>
-    <li><a href="talks/2011/11/perlbrew.pdf" type="text/pdf" title="Tony's presentation on App::perlbrew">Managing Multiple Perl installations in your $HOME with App::perlbrew</a> (Tony Edwardson)</li>
-    <li><a href="talks/2011/11/dataaccess.pdf" type="text/pdf" title="Colin's presentation on Data Access">Musings on Data Access</a> (Colin Bradford)</li>
-</ul>
-
-<p>Our fifteenth technical meeting took place place on Tuesday, 12th April 2011, and featured the following talks:</p>
-<ul>
-    <li><a href="http://perl.dragonstaff.co.uk/twitter_oauth/" type="text/html" title="Peter's presentation on OAuth">Adding OAuth to the BBC World Service Twitter Feeder</a> (Peter Edwards)</li>
-    <li><a href="talks/2011/04/xml_compile.pdf" type="text/pdf" title="Slides for Colin's presentation on XML::Compile">Using XML::Compile to generate XML from schemas</a> (Colin Bradford)</li>
-    <li>Reusing Objects in your Modules (Tom Hukins)</li>
-    <li>Git and the MiltonKeynes.pm Web Site (Tom Hukins)</li>
-    <li>Identifying bugs in perl with git bisect (Tom Hukins)</li>
-    <li><a href="talks/2011/04/schedule_pluggable.pdf" type="text/pdf" title="Slides for Tony's presentastion on Schedule::Pluggable">Schedule::Pluggable</a> (Tony Edwardson)</li>
-    <li>Euclid, Socrates and Mill - Quality in Documentation (Matt Trout)</li>
-</ul>
-
-<p>Our fourteenth technical meeting took place on Tuesday, 12th October 2010, and featured the following talks:</p>
-
-<ul>
-    <li><a href="talks/2010/10/evolving_moose.pdf" type="text/pdf" title="Slides for Dave's talk about developing with Moose">Evolving Software with Moose</a> (Dave Cross)</li>
-    <li><a href="talks/2010/10/poe-pres.pdf" type="text/pdf" title="Slides for Colin's talk about POE">An introduction to writing web servers with POE</a> (Colin Bradford)</li>
-    <li><a href="talks/2010/10/XMLTV_Talk_MKPM_October_2010.pdf" type="text/pdf" title="Slides for Nick's talk about XMLTV">TV listings with XMLTV</a> (Nick Morrott)</li>
-    <li>Lightning Talks:
-        <ul>
-            <li><a href="talks/2010/10/PAR_Talk.pdf" type="text/pdf" title="Slides for Tony's talk about PAR">Using PAR to Package and Deploy Perl Applications</a> (Tony Edwardson)</li>
-            <li><a href="talks/2010/10/Exchange-SOAP.pdf" type="text/pdf" title="Slides for Oliver's talk about Exchange web services">Microsoft Exchange and SOAP - my two great loves</a> (Oliver Gorwits)</li>
-            <li><a href="talks/2010/10/LOVEFiLM_API.pdf" type="text/pdf" title="Slides for Paul's talk about LOVEFiLM's API">Using LOVEFiLM's API</a> (Paul Mooney)</li>
-        </ul>
-    </li>
-</ul>
-
-
-<p>Our thirteenth technical meeting took place on Tuesday, 15th June 2010, and featured the following talks:</p>
-
-<ul>
-  <li><a href="http://perl.jonallen.info/talks/couchdb-introduction" type="text/html" title="Slides for Jon's talk about CouchDB">Introduction to CouchDB</a> (Jon Allen)</li>
-  <li><a href="talks/2010/06/paul_mooney_stomp_moosex_workers.pdf" type="text/pdf" title="Slides for Paul's talk about Catalyst::Engine::Stomp and MooseX::Workers">Catalyst::Engine::Stomp and MooseX::Workers</a> (Paul Mooney)</li>
-  <li><a href="talks/2010/06/tony_edwardson_learning_from_previous_meetings.pdf" type="text/pdf" title="Slides for Tony's talk about learning from previous technical meetings">Using What I Learned From Previous Technical Meetings</a> (Tony Edwardson)</li>
-  <li>Lightning Talks:
-  <ul>
-    <li><a href="talks/2010/06/benjamin_martin_android_scripting_environment.pdf" type="text/pdf" title="Slides for Ben's talk about the Android Scripting Enviroment">The Android Scripting Environment</a> (Benjamin Martin)</li>
-  </ul>
-</ul>
-
-<p>Our twelfth technical meeting took place on Tuesday, 9th February 2010 at the Open University:</p>
-
-<ul>
-  <li><a href="talks/2010/02/ziya_suzen_android_development.pdf" type="text/pdf" title="Slides for Ziya's talk about Android development">Practical Android Development - An Introduction</a> (Ziya Suzen)</li>
-  <li><a href="talks/2010/02/oliver_gorwits_conntrack_netfilter_netflow_nat_linux.pdf" type="text/pdf" title="Slides for Oliver's talk about NAT on Linux">conntrack, Netfilter, NetFlow and NAT under Linux</a> (Oliver Gorwits)</li>
-  <li>Lightning Talks:
-  <ul>
-    <li><a href="talks/2010/02/colin_bradford_http_async.pdf" type="text/pdf" title="Slides for Colin's talk about HTTP::Async">Using HTTP::Async for Parallel HTTP Requests</a> (Colin Bradford)</li>
-    <li><a href="http://www.presentingperl.org/lpw2009/repeat-yourself/" title="Video of Tom's talk about repeating ideas">Do Repeat Yourself.  Sometimes.</a> (Tom Hukins)</li>
-  </ul>
-</ul>
-
-<p>Our eleventh technical meeting took place on Thursday, 15th October 2009 at the Open University:</p>
-
-<ul>
-  <li><a href="http://www.slideshare.net/davorg/perl-training" type="text/html" title="Slides for Dave's talk about Teaching Perl">Teaching Perl - Experiences, Anecdotes and Vague Conclusions</a> (Dave Cross)</li>
-  <li><a href="http://www.slideshare.net/davorg/cpan-module-maintenance-2243226" type="text/html" title="Slides for Dave's talk about Maintaining CPAN Modules">How I Maintain my CPAN Modules</a> (Dave Cross)</li>
-  <li><a href="talks/2009/10/katherine_spice_perlbal.pdf" type="text/pdf" title="Slides for Katherine's talk about Perlbal">Load Balancing with Perlbal</a> (Katherine Spice)</li>
-  <li><a href="talks/2009/10/tony_edwardson_moose.pdf" type="text/pdf" title="Slides for Tony's talk about Moose">Using Moose to Build Object Oriented Applications</a> (Tony Edwardson)</li>
-  <li>Lightning Talks:
-  <ul>
-    <li><a href="talks/2009/10/benjamin_martin_catalyst.pdf" type="text/pdf" title="Slides for Benjamin's talk about Catalyst">A New User's Perspective on Catalyst</a> (Benjamin Martin)</li>
-    <li><a href="http://perl.jonallen.info/projects/catalyst-view-thumbnail" type="text/html" title="Details of Jon's Catalyst::View::Thumbnail module">Creating Thumbnail Images with Catalyst</a> (Jon Allen)</li>
-  </ul>
-</ul>
-
-<p>Our tenth technical meeting took place on Tuesday, 14th July 2009 at the Open University:</p>
-
-<ul>
-  <li><a href="talks/2009/07/colin_bradford_data_warehousing.pdf" type="text/pdf" title="Slides for Colin's talk about Data Warehousing with Perl">Data Warehousing with Perl</a>:
-  Archiving and analysing large data sets from a popular online business
-  (Colin Bradford)</li>
-  <li><a href="talks/2009/07/oliver_gorwits_local_lib.pdf" type="text/pdf" title="Slides for Oliver's talk about local::lib">Using local::lib to let users manage modules without needing root access</a> (Oliver Gorwits)</li>
-  <li><a href="http://www.shadowcat.co.uk/archive/conference-video/yapc-na-2009/dbic/" type="text/html" title="Video of The future of DBIx::Class presented at YAPC::NA">The future of DBIx::Class</a>, a database object relational mapper for Perl (Matt Trout) [<a href="http://shadowcat.co.uk/catalyst/talks/-npw-2009/future-of-dbix-class.xul" type="application/vnd.mozilla.xul+xml" title="XUL Presentation of Matt's talk for Mozilla based browsers">slides</a>]</li>
-  <li>Lightning Talks:
-  <ul>
-    <li>Using WWW::Mechanize to automate interacting with Web sites, from the perspective of a non-Perl programmer (Ian Cameron)</li>
-    <li>Managing database queries with SQL::Library (Tony Edwardson)</li>
-    <li>Code, Comments and Commit Messages (Tom Hukins)</li>
-  </ul>
-  </li>
-</ul>
-
-<p>We held our ninth technical meeting at the Open University on Thursday, 16th April 2009:</p>
-
-<ul>
-  <li><a href="talks/2009/04/colin_bradford_memcached.pdf" type="text/pdf" title="Slides for Colin's talk about memcached">Distributed caching with memcached to improve performance and scale web applications</a> (Colin Bradford)</li>
-  <li><a href="http://perl.dragonstaff.co.uk/mkpm_wxwidgets.pdf" type="text/pdf" title="Slides for Peter's talk about WxWidgets">Developing cross platform GUI applications with WxWidgets</a> (Peter Edwards)</li>
-  <li><a href="talks/2009/04/tony_edwardson_moose_introduction.pdf" type="text/pdf" title="Slides for Tony's talk about Moose">Moose - the new way to use Object orientation from Perl 5</a> (Tony Edwardson)</li>
-  <li><a href="talks/2009/04/tom_hukins_cpan_toolchain.pdf" type="text/pdf" title="Slides for Tom's talk about CPAN's toolchain">Using CPAN's toolchain to improve your own code</a> (Tom Hukins)</li>
-</ul>
-
-<p>We held our eighth technical meeting at the Open University on Tuesday, 13th January 2009:</p>
-
-<ul>
-  <li><a href="http://perl.jonallen.info/talks/online-retail" type="text/html" title="Details of Jon's talk on Online Retail with Perl">Online Retail with Perl</a> (Jon Allen from <a href="http://www.pennysarcade.co.uk/" type="text/html" title="Penny's Arcade Online Shop">Penny's Arcade</a>)</li>
-  <li>Lightning Talks:
-  <ul>
-    <li><a href="talks/2009/01/tony_edwardson_only.pdf" type="text/pdf" title="Slides for Tony's talk on only.pm">Specifying Module Versions with only.pm</a> (Tony Edwardson)</li>
-    <li><a href="talks/2009/01/rod_norfor_chart_gnuplot.pdf" type="text/pdf" title="Slides for Rod's talk on Chart::Gnuplot">Chart::Gnuplot</a> (Rod Norfor)</li>
-    <li><a href="talks/2009/01/colin_bradford_memcached.pdf" type="text/pdf" title="Slides for Colin's talk on memcached">memcached</a> (Colin Bradford)</li>
-    <li><a href="http://www.pennysarcade.co.uk/files/Creating_PDF_files_with_Catalyst.pdf" type="text/pdf" title="Slides for Jon's talk on Creating PDF files with Catalyst">Creating PDF files with Catalyst</a> (Jon Allen)</li>
-    <li><a href="talks/2009/01/peter_edwards_exceptions.pdf" type="text/pdf" title="Slides for Peter's talk on Exceptions">Exceptions</a> (Peter Edwards)</li>
-    <li>Building Your Own Perl (Tom Hukins)</li>
-  </ul></li>
-</ul>
-
-<p>We held our seventh technical meeting at the Open University on Monday, 8th October 2008:</p>
-
-<ul>
-  <li><a href="talks/2008/09/dave_cross_perl_in_rpm_land.pdf" title="Slides for Perl in RPM Land" type="text/pdf">Perl in RPM Land</a> (Dave Cross)</li>
-  <li><a href="talks/2008/09/robbie_bow_sql_and_mysql.pdf" title="Slides for SQL and MySQL (PDF)" type="text/pdf">SQL and MySQL</a> (Robbie Bow)</li>
-  <li><a href="http://birmingham.pm.org/talks/barbie/perltest2/" title="Slides to Testing With Perl (HTML)" type="text/html">Testing With Perl</a> (Barbie)</li>
-  <li>Lightning Talks:
-  <ul>
-    <li><a href="talks/2008/09/robbie_bow_little_helpers.pdf" title="Slides for Robbie's Little Helpers (PDF)" type="text/pdf">Robbie's Little Helpers</a> (Robbie Bow)</li>
-    <li><a href="talks/2008/09/tom_hukins_logging_with_perl.pdf" title="Slides for Logging with Perl (PDF)" type="text/pdf">Logging with Perl</a> (Tom Hukins)</li>
-    <li>The New <a href="http://www.cpantesters.org/" title="CPAN Testers Repotrs" type="text/html">CPAN Testers Report Site</a> (Barbie)</li>
-  </ul></li>
-</ul>
-
-<p>Our sixth technical meeting took place at the Open University on Tuesday, 8th July 2008:</p>
-
-<ul>
-  <li><a href="talks/2008/07/tom_hukins_dbix_class_introduction.pdf" title="Slides for An Introduction to DBIx::Class (PDF)" type="text/pdf">An Introduction to DBIx::Class</a> (Tom Hukins)</li>
-  <li><a href="http://perl.dragonstaff.co.uk/mkpm3/real_world_xplatform_testing_files/frame.htm" title="Slides for Real Life Cross-Platform Testing (HTML saved from Powerpoint)" type="text/html">Real Life Cross-Platform Testing</a> (Peter Edwards)</li>
-  <li><a href="talks/2008/07/tony_edwardson_source_filters.pdf" title="Slides for Source Filters (PDF)" type="text/pdf">Source Filters</a> (Tony Edwardson)</li>
-  <li><a href="talks/2008/07/oliver_gorwits_holiday.pdf" title="Slides for What I Did On My Holidays (PDF)" type="text/pdf">What I Did On My Holidays</a> (Oliver Gorwits)</li>
-</ul>
-
-<p>Our fifth technical meeting took place at the Open University on Thursday, 15th November 2007:</p>
-
-<ul>
-  <li><a href="talks/2007/11/dave_cross_tt_intro/" title="Slides for Introduction to Template Toolkit (HTML)" type="text/html">An Introduction to the Template Toolkit</a> (Dave Cross)</li>
-  <li>Projects at the <a href="http://www.tnmoc.co.uk/" title="The National Museum of Computing's Web Site" type="text/html">National Museum of Computing</a> (Adam Lowe)</li>
-  <li><a href="talks/2007/11/oliver_gorwits_networks.pdf" title="Slides for Notes on Network Monitoring (PDF)" type="text/pdf">Notes on Network Monitoring</a> (Oliver Gorwits)</li>
-</ul>
-
-<p>Our fourth technical meeting took place at the Open University on Monday, 2nd April 2007:</p>
-
-<ul>
-  <li><a href="http://perl.dragonstaff.co.uk/mkpm2/index.htm" title="Talk Slides (HTML)">Desperately Seeking a Lightweight Perl web Framework</a> (Peter Edwards)</li>
-  <li>Testing When You Don't Have Time (Tom Hukins)</li>
-  <li><a href="http://birmingham.pm.org/talks/barbie/selenium/" title="Talk Slides (HTML)">Selenium - An Introduction to Web testing</a> (Barbie)</li>
-</ul>
-
-<p>Our third technical meeting took place on Tuesday, 10th October 2006 at SpiraHellic Multimedia featuring the following talks:</p>
-
-<ul>
-  <li><a href="talks/2006/10/lee_structural_bix.pdf" title="Slides for Doing something useful with the secrets of life (PDF)">Doing something useful with the secrets of life: structural bioinformatics</a> (Lee Larcombe)</li>
-  <li>Playing Games (Robbie Bow)</li>
-  <li><a href="talks/2006/10/learned_at_yapc.pdf" title="Slides for What I learned at YAPC Europe (PDF)">What I learned at <abbr title="Yet Another Perl Conference">YAPC</abbr> Europe</a> (Tom Hukins)</li>
-  <li>Using the SVK version control system (Nik Clayton)</li>
-</ul>
-
-<p>We held our second technical meeting on Tuesday 13th June 2006 at SpiraHellic Multimedia featuring a the following talks:</p>
-
-<ul>
-  <li>Writing a perl/swig interface to the C++ CLucene search engine
-  [slides as <a href="http://perl.dragonstaff.co.uk/mkpm/">HTML</a> or <a href="http://perl.dragonstaff.co.uk/perlCLucene.ppt">Powerpoint</a>] (Peter Edwards)</li>
-  <li><a href="http://shadowcatsystems.co.uk/static/cat-yapc/" title="Slides for Matt's talks">Beautiful and Unique Snowflakes</a> (Matt Trout)</li>
-  <li>Better Living Through Perl (Michael Lush)</li>
-  <li><a href="talks/2006/06/tom_hukins_tracing_aspect.pdf" title="Slides for Tracing Code with Aspect.pm (PDF)">Tracing Code with Aspect.pm</a> (Tom Hukins)</li>
-  <li><a href="talks/2006/06/paul_mooney_meaning_life.ppt" title="Slides for Perl and the secrets of life (Powerpoint)">Perl and the secrets of life</a> (Paul Mooney)</li>
-</ul>
-
-<p>We held our first technical meeting on Tuesday, 14th March 2006 at SpiraHellic Multimedia featuring the following talks:</p>
-
-<ul>
-  <li><a href="talks/2006/03/dave_cross_databases_and_perl/" title="Slides for Databases and Perl">Databases and Perl</a> (Dave Cross)</li>
-  <li><a href="talks/2006/03/tom_hukins_www_mechanize.pdf" title="Slides for Gathering information from the Web with WWW::Mechanize">Gathering information from the Web with WWW::Mechanize</a> (Tom Hukins)</li>
-  <li><a href="talks/2006/03/nik_clayton_testing_legacy_code.pdf" title="Slides for Testing Legacy Code">Testing Legacy Code</a> (Nik Clayton)</li>
-  <li>Integrating Data Sets to Bespoke Applications via XML::Twig (Rod Norfor)</li>
-</ul>
-</div>
+</body>
 </html>

@@ -1,0 +1,21 @@
+---
+- date: 'Tuesday, 14th March 2006'
+  desc: We held our first technical meeting
+  location: SpiraHellic Multimedia
+  month: March
+  talks:
+    - author: Dave Cross
+      desc: Databases and Perl
+      href: static/talks/2006/03/dave_cross_databases_and_perl/
+      title: Slides for Databases and Perl
+    - author: Tom Hukins
+      desc: Gathering information from the Web with WWW::Mechanize
+      href: static/talks/2006/03/tom_hukins_www_mechanize.pdf
+      title: Slides for Gathering information from the Web with WWW::Mechanize
+    - author: Nik Clayton
+      desc: Testing Legacy Code
+      href: static/talks/2006/03/nik_clayton_testing_legacy_code.pdf
+      title: Slides for Testing Legacy Code
+    - author: Rod Norfor
+      desc: Integrating Data Sets to Bespoke Applications via XML::Twig
+  year: 2006

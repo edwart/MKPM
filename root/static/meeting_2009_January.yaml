@@ -1,0 +1,33 @@
+---
+- date: 'Tuesday, 13th January 2009'
+  desc: We held our eighth technical meeting
+  location: the Open University
+  month: January
+  talks:
+    - author: Jon Allen
+      desc: Online Retail with Perl
+      href: http://www.pennysarcade.co.uk/
+      title: Penny's Arcade Online Shop
+    - author: Tony Edwardson
+      desc: Specifying Module Versions with only.pm
+      href: static/talks/2009/01/tony_edwardson_only.pdf
+      title: Slides for Tony's talk on only.pm
+    - author: Rod Norfor
+      desc: Chart::Gnuplot
+      href: static/talks/2009/01/rod_norfor_chart_gnuplot.pdf
+      title: Slides for Rod's talk on Chart::Gnuplot
+    - author: Colin Bradford
+      desc: memcached
+      href: static/talks/2009/01/colin_bradford_memcached.pdf
+      title: Slides for Colin's talk on memcached
+    - author: Jon Allen
+      desc: Creating PDF files with Catalyst
+      href: http://www.pennysarcade.co.uk/files/Creating_PDF_files_with_Catalyst.pdf
+      title: Slides for Jon's talk on Creating PDF files with Catalyst
+    - author: Peter Edwards
+      desc: Exceptions
+      href: static/talks/2009/01/peter_edwards_exceptions.pdf
+      title: Slides for Peter's talk on Exceptions
+    - author: Tom Hukins
+      desc: Building Your Own Perl
+  year: 2009

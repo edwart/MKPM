@@ -1,0 +1,27 @@
+---
+- date: 'Tuesday, 12th October 2010'
+  desc: Our fourteenth technical meeting took place
+  location: the Open University
+  month: October
+  talks:
+    - author: Dave Cross
+      desc: Evolving Software with Moose
+      href: static/talks/2010/10/evolving_moose.pdf
+      title: Slides for Dave's talk about developing with Moose
+    - author: Colin Bradford
+      desc: An introduction to writing web servers with POE
+      href: static/talks/2010/10/poe-pres.pdf
+      title: Slides for Colin's talk about POE
+    - author: Nick Morrott
+      desc: TV listings with XMLTV
+      href: static/talks/2010/10/XMLTV_Talk_MKPM_October_2010.pdf
+      title: Slides for Nick's talk about XMLTV
+    - author: Tony Edwardson
+      desc: Using PAR to Package and Deploy Perl Applications
+      href: static/talks/2010/10/PAR_Talk.pdf
+      title: Slides for Tony's talk about PAR
+    - author: Oliver Gorwits
+      desc: 'Microsoft Exchange and SOAP - my two great loves'
+      href: static/talks/2010/10/Exchange-SOAP.pdf
+      title: Slides for Oliver's talk about Exchange web services
+  year: 2010
