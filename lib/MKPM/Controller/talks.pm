@@ -1,4 +1,4 @@
-package MKPM::Controller::Root;
+package MKPM::Controller::talks;
 use Moose;
 use namespace::autoclean;
 use Data::Dumper;
@@ -29,18 +29,18 @@ The root page (/)
 
 =cut
 
-sub index :Path :Args(0) {
+sub index : Path :Args(1) {
     my ( $self, $c, @args ) = @_;
 	my $fh = FileHandle->new(">>/tmp/tony.log");
-	$fh->print("index");
+	$fh->print("talks");
 	$fh->print(Dumper \@args);
 	$fh->close;
-
 	our $talks;
 	do $ENV{HOME}.'/MKPM/root/static/talks.data';
 
 	$c->stash( talks => $talks,
-			   template => 'index.tt');
+			   args => [ @args ],
+			   template => 'talks.tt');
 	$c->forward( $c->view('TT') );
 }
 

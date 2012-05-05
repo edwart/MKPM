@@ -17,7 +17,10 @@ foreach my $file (<*.yaml>) {
 		my $month = Decode_Month( $meeting->{month} );
 		$talks{by_date}{ $meeting->{year} }{ $month } = { %{ $meeting } };
 		foreach my $talk (@{ $meeting->{talks} }) {
-			$talks{by_author}{ $talk->{author} } { $meeting->{year} }{ $month } = $talk;
+			$talks{by_author}{ $talk->{author} } { $meeting->{year} }{ $month } ||= [];
+			$talk->{month} = $meeting->{month};
+			warn Dumper $talk;
+			push(@{ $talks{by_author}{ $talk->{author} } { $meeting->{year} }{ $month } }, { %{ $talk } });
 		}
 	}
 }

@@ -4,7 +4,13 @@
     <h1>Milton Keynes Perl Mongers</h1>
 </div>
 [% INCLUDE menus.tt %]
-  <p>Welcome to Milton Keynes Perl Mongers.  This
+
+<br style="clear: left" />
+</div>
+  <p>Welcome to Talks . 
+  
+  
+  This
 group exists for anyone in or near to Milton Keynes to have fun learning
 about the Perl computer programming language.</p>
 
