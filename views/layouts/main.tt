@@ -1,0 +1,70 @@
+<!--Force IE6 into quirks mode with this comment tag-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=[% settings.charset %]" />
+<title>Milton Keynes Perl Mongers</title>
+<link rel="icon" href="[% request.uri_base %]/images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="[% request.uri_base %]/css/site.css">
+<link rel="stylesheet" type="text/css" href="[% request.uri_base %]/css/jqueryslidemenu.css" />
+
+<!--[if lte IE 7]>
+<style type="text/css">
+html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
+</style>
+<![endif]-->
+<script type="text/javascript" src="[% uri_base %]/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="[% uri_base %]/jquery/jqueryslidemenu.js"></script>
+</head>
+<body>
+<div id="header">
+    <h1>Milton Keynes Perl Mongers</h1>
+</div>
+<div id="myslidemenu" class="jqueryslidemenu">
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/talks">Talks</a>
+    <ul>
+        <li><a href="/talks">By Date</a>
+            <ul>
+            [% FOREACH year IN talks.by_date.keys.sort -%]
+                <li><a href="[% uri_base %]/talks?year=[% year %]">[% year %]</a>
+                <ul>
+                [% FOREACH month IN talks.by_date.$year.keys.nsort -%]
+                    <li><a href="[% uri_base %]/talks?year=[% year %]&month=[% month %]">[% talks.by_date.$year.$month.month %]</a>
+                    <ul>
+                    [% FOREACH talk IN talks.by_date.$year.$month.talks -%]
+                        <li><a href="[% talk.href %]" target="_blank">[% talk.author %] - [% talk.desc %]</a></li>
+                    [% END -%]
+                    </ul>
+                    </li>
+                [% END -%]
+                </ul>
+                </li>
+            [% END -%]
+            </ul>
+        </li>
+        <li><a href="/talks">By Author</a>
+            <ul>
+            [% FOREACH author IN talks.by_author.keys.sort %]
+                <li><a href="[% uri_base %]/talks?author=[% author %]">[% author %]</a>
+                <ul>
+                [% FOREACH year IN talks.by_author.$author.keys.sort %]
+					[% FOREACH month IN talks.by_author.$author.$year.keys.sort %]
+						[% FOREACH talk IN talks.by_author.$author.$year.$month %]
+							<li><a href="[% talk.href %]" target="_blank">[% talk.month %] [% year %] - [% talk.desc %]</a></li>
+						[% END -%]
+					[% END -%]
+                [% END -%]
+                </ul>
+                </li>
+            [% END -%]
+        </ul>
+    </ul>
+</ul>
+</div>
+[% content %]
+</body>
+</html>

@@ -1,0 +1,29 @@
+<br>
+<br>
+<br>
+[% IF params.author.defined %]
+	<h2>technical talks by [% params.author %]<h2>
+	[% FOREACH year IN talks.by_date.keys.sort -%]
+		[% FOREACH month in talks.by_date.$year.keys.nsort %]
+			[% FOREACH talk IN talks.by_date.$year.$month.talks -%]
+			[% NEXT UNLESS talk.author == params.author %]
+			<li>on [%  talks.by_date.$year.$month.date %] at [% talks.by_date.$year.$month.location %] [% talk.author %] talked about  <a href="[% talk.href %]">[% talk.desc %]</a></li>
+			[% END %]
+		[% END %]
+	[% END %]
+[% ELSE %]
+	[% FOREACH year IN talks.by_date.keys.sort -%]
+		[% NEXT IF params.year.defined && year != params.year %]
+		<h2>[% year %] technical talks<h2>
+		[% FOREACH month in talks.by_date.$year.keys.nsort %]
+			[% NEXT IF params.month.defined && month != params.month %]
+			<ul>
+			<p>[% talks.by_date.$year.$month.desc %] took place on [%  talks.by_date.$year.$month.date %] at [%  talks.by_date.$year.$month.location %] and featured the following talks :- </p>
+			[% FOREACH talk IN talks.by_date.$year.$month.talks -%]
+				<li><a href="[% talk.href %]">[% talk.desc %]</a> ([% talk.author %])</li>
+			[% END %]
+			</ul>
+		[% END %]
+	[% END %]
+[% END %]
+

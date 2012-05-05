@@ -1,0 +1,47 @@
+body {
+  color: #333;
+  background: #f8f8f8;
+  margin: 0;
+}
+
+#header {
+  min-height: 199px;
+  background: url(/images/cows.jpg) no-repeat #84ab52;
+  color: inherit;
+}
+
+h1 {
+  padding: 2em 1em 2em 450px;
+  text-align: right;
+  margin: 0;
+}
+
+#header h1, h2, h3, h4 {
+  color: #e0c99c;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  background: inherit;
+}
+
+h2 {
+  margin-left: 0.5em;
+  margin-right: 1em;
+  font-size: 1.2em;
+  border-bottom: #84ab52 dotted 1px;
+}
+
+h3 {
+  font-size: 1em;
+  margin-left: 1em;
+}
+
+h4 {
+  font-size: 1em;
+  margin-left: 1em;
+  margin-bottom: 0;
+}
+
+
+p {
+  margin: 1em;
+  clear: both;
+}
