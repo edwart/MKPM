@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=[% settings.charset %]" />
 <title>Milton Keynes Perl Mongers</title>
 <link rel="icon" href="[% request.uri_base %]/images/favicon.ico">
-<link rel="stylesheet" type="text/css" href="[% request.uri_base %]/css/site.css">
+<link rel="stylesheet" type="text/css" href="[% request.uri_base %]/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="[% request.uri_base %]/css/jqueryslidemenu.css" />
 
 <!--[if lte IE 7]>

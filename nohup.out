@@ -1,0 +1,1348 @@
+[17357] debug @0.000013> $VAR1 = '/home/tony/mkpm/public/talks.data';
+$VAR2 = {
+          'by_date' => {
+                         '2007' => {
+                                     '4' => {
+                                              'location' => 'the Open University',
+                                              'month' => 'April',
+                                              'desc' => 'Our fourth technical meeting took place',
+                                              'date' => 'Monday, 2nd April 2007',
+                                              'talks' => [
+                                                           {
+                                                             'desc' => 'Desperately Seeking a Lightweight Perl web Framework',
+                                                             'href' => 'http://perl.dragonstaff.co.uk/mkpm2/index.htm',
+                                                             'month' => 'April',
+                                                             'author' => 'Peter Edwards',
+                                                             'title' => 'Talk Slides (HTML)'
+                                                           },
+                                                           {
+                                                             'desc' => 'Testing When You Don\'t Have Time',
+                                                             'month' => 'April',
+                                                             'author' => 'Tom Hukins'
+                                                           },
+                                                           {
+                                                             'desc' => 'Selenium - An Introduction to Web testing',
+                                                             'href' => 'http://birmingham.pm.org/talks/barbie/selenium/',
+                                                             'month' => 'April',
+                                                             'author' => 'Barbie',
+                                                             'title' => 'Talk Slides (HTML)'
+                                                           }
+                                                         ],
+                                              'year' => '2007'
+                                            },
+                                     '11' => {
+                                               'location' => 'the Open University',
+                                               'month' => 'November',
+                                               'desc' => 'Our fifth technical meeting took place',
+                                               'date' => 'Thursday, 15th November 2007',
+                                               'talks' => [
+                                                            {
+                                                              'desc' => 'An Introduction to the Template Toolkit',
+                                                              'href' => '/talks/2007/11/dave_cross_tt_intro/',
+                                                              'month' => 'November',
+                                                              'author' => 'Dave Cross',
+                                                              'title' => 'Slides for Introduction to Template Toolkit (HTML)'
+                                                            },
+                                                            {
+                                                              'desc' => 'Projects at the National Museum of Computing',
+                                                              'href' => 'http://www.tnmoc.co.uk/',
+                                                              'month' => 'November',
+                                                              'author' => 'Adam Lowe',
+                                                              'title' => 'The National Museum of Computing\'s Web Site'
+                                                            }
+                                                          ],
+                                               'year' => '2007'
+                                             }
+                                   },
+                         '2010' => {
+                                     '6' => {
+                                              'location' => 'the Open University',
+                                              'month' => 'June',
+                                              'desc' => 'Our thirteenth technical meeting took place',
+                                              'date' => 'Tuesday, 15th June 2010',
+                                              'talks' => [
+                                                           {
+                                                             'desc' => 'Introduction to CouchDB',
+                                                             'href' => 'http://perl.jonallen.info/talks/couchdb-introduction',
+                                                             'month' => 'June',
+                                                             'author' => 'Jon Allen',
+                                                             'title' => 'Slides for Jon\'s talk about CouchDB'
+                                                           },
+                                                           {
+                                                             'desc' => 'Catalyst::Engine::Stomp and MooseX::Workers',
+                                                             'href' => '/talks/2010/06/paul_mooney_stomp_moosex_workers.pdf',
+                                                             'month' => 'June',
+                                                             'author' => 'Paul Mooney',
+                                                             'title' => 'Slides for Paul\'s talk about Catalyst::Engine::Stomp and MooseX::Workers'
+                                                           },
+                                                           {
+                                                             'desc' => 'Using What I Learned From Previous Technical Meetings',
+                                                             'href' => 'talks/2010/06/tony_edwardson_learning_from_previous_meetings.pdf',
+                                                             'month' => 'June',
+                                                             'author' => 'Tony Edwardson',
+                                                             'title' => 'Slides for Tony\'s talk about learning from previous technical meetings'
+                                                           }
+                                                         ],
+                                              'year' => '2010'
+                                            },
+                                     '10' => {
+                                               'location' => 'the Open University',
+                                               'month' => 'October',
+                                               'desc' => 'Our fourteenth technical meeting took place',
+                                               'date' => 'Tuesday, 12th October 2010',
+                                               'talks' => [
+                                                            {
+                                                              'desc' => 'Evolving Software with Moose',
+                                                              'href' => 'talks/2010/10/evolving_moose.pdf',
+                                                              'month' => 'October',
+                                                              'author' => 'Dave Cross',
+                                                              'title' => 'Slides for Dave\'s talk about developing with Moose'
+                                                            },
+                                                            {
+                                                              'desc' => 'An introduction to writing web servers with POE',
+                                                              'href' => 'talks/2010/10/poe-pres.pdf',
+                                                              'month' => 'October',
+                                                              'author' => 'Colin Bradford',
+                                                              'title' => 'Slides for Colin\'s talk about POE'
+                                                            },
+                                                            {
+                                                              'desc' => 'TV listings with XMLTV',
+                                                              'href' => 'talks/2010/10/XMLTV_Talk_MKPM_October_2010.pdf',
+                                                              'month' => 'October',
+                                                              'author' => 'Nick Morrott',
+                                                              'title' => 'Slides for Nick\'s talk about XMLTV'
+                                                            },
+                                                            {
+                                                              'desc' => 'Using PAR to Package and Deploy Perl Applications',
+                                                              'href' => 'talks/2010/10/PAR_Talk.pdf',
+                                                              'month' => 'October',
+                                                              'author' => 'Tony Edwardson',
+                                                              'title' => 'Slides for Tony\'s talk about PAR'
+                                                            },
+                                                            {
+                                                              'desc' => 'Microsoft Exchange and SOAP - my two great loves',
+                                                              'href' => 'talks/2010/10/Exchange-SOAP.pdf',
+                                                              'month' => 'October',
+                                                              'author' => 'Oliver Gorwits',
+                                                              'title' => 'Slides for Oliver\'s talk about Exchange web services'
+                                                            }
+                                                          ],
+                                               'year' => '2010'
+                                             },
+                                     '2' => {
+                                              'location' => 'the Open University:',
+                                              'month' => 'February',
+                                              'desc' => 'Our twelfth technical meeting took place',
+                                              'date' => 'Tuesday, 9th February 2010',
+                                              'talks' => [
+                                                           {
+                                                             'desc' => 'Practical Android Development - An Introduction',
+                                                             'href' => 'talks/2010/02/ziya_suzen_android_development.pdf',
+                                                             'month' => 'February',
+                                                             'author' => 'Ziya Suzen',
+                                                             'title' => 'Slides for Ziya\'s talk about Android development'
+                                                           },
+                                                           {
+                                                             'desc' => 'conntrack, Netfilter, NetFlow and NAT under Linux',
+                                                             'href' => 'talks/2010/02/oliver_gorwits_conntrack_netfilter_netflow_nat_linux.pdf',
+                                                             'month' => 'February',
+                                                             'author' => 'Oliver Gorwits',
+                                                             'title' => 'Slides for Oliver\'s talk about NAT on Linux'
+                                                           },
+                                                           {
+                                                             'desc' => 'Using HTTP::Async for Parallel HTTP Requests',
+                                                             'href' => 'talks/2010/02/colin_bradford_http_async.pdf',
+                                                             'month' => 'February',
+                                                             'author' => 'Colin Bradford',
+                                                             'title' => 'Slides for Colin\'s talk about HTTP::Async'
+                                                           },
+                                                           {
+                                                             'desc' => 'Do Repeat Yourself. Sometimes.',
+                                                             'href' => 'http://www.presentingperl.org/lpw2009/repeat-yourself/',
+                                                             'month' => 'February',
+                                                             'author' => 'Tom Hukins',
+                                                             'title' => 'Video of Tom\'s talk about repeating ideas'
+                                                           }
+                                                         ],
+                                              'year' => '2010'
+                                            }
+                                   },
+                         '2008' => {
+                                     '7' => {
+                                              'location' => 'the Open University',
+                                              'month' => 'July',
+                                              'desc' => 'Our sixth technical meeting took place',
+                                              'date' => 'Tuesday, 8th July 2008',
+                                              'talks' => [
+                                                           {
+                                                             'desc' => 'An Introduction to DBIx::Class',
+                                                             'href' => 'talks/2008/07/tom_hukins_dbix_class_introduction.pdf',
+                                                             'month' => 'July',
+                                                             'author' => 'Tom Hukins',
+                                                             'title' => 'Slides for An Introduction to DBIx::Class (PDF)'
+                                                           },
+                                                           {
+                                                             'desc' => 'Real Life Cross-Platform Testing',
+                                                             'href' => 'http://perl.dragonstaff.co.uk/mkpm3/real_world_xplatform_testing_files/frame.htm',
+                                                             'month' => 'July',
+                                                             'author' => 'Peter Edwards',
+                                                             'title' => 'Slides for Real Life Cross-Platform Testing (HTML saved from Powerpoint)'
+                                                           },
+                                                           {
+                                                             'desc' => 'Source Filters',
+                                                             'href' => 'talks/2008/07/tony_edwardson_source_filters.pdf',
+                                                             'month' => 'July',
+                                                             'author' => 'Tony Edwardson',
+                                                             'title' => 'Slides for Source Filters (PDF)'
+                                                           },
+                                                           {
+                                                             'desc' => 'What I Did On My Holidays',
+                                                             'href' => 'talks/2008/07/oliver_gorwits_holiday.pdf',
+                                                             'month' => 'July',
+                                                             'author' => 'Oliver Gorwits',
+                                                             'title' => 'Slides for What I Did On My Holidays (PDF)'
+                                                           }
+                                                         ],
+                                              'year' => '2008'
+                                            },
+                                     '10' => {
+                                               'location' => 'the Open University',
+                                               'month' => 'October',
+                                               'desc' => 'We held our seventh technical meeting',
+                                               'date' => 'Monday, 8th October 2008',
+                                               'talks' => [
+                                                            {
+                                                              'desc' => 'Perl in RPM Land',
+                                                              'href' => 'talks/2008/09/dave_cross_perl_in_rpm_land.pdf',
+                                                              'month' => 'October',
+                                                              'author' => 'Dave Cross',
+                                                              'title' => 'Slides for Perl in RPM Land'
+                                                            },
+                                                            {
+                                                              'desc' => 'SQL and MySQL',
+                                                              'href' => 'talks/2008/09/robbie_bow_sql_and_mysql.pdf',
+                                                              'month' => 'October',
+                                                              'author' => 'Robbie Bow',
+                                                              'title' => 'Slides for SQL and MySQL (PDF)'
+                                                            },
+                                                            {
+                                                              'desc' => 'Testing With Perl',
+                                                              'href' => 'http://birmingham.pm.org/talks/barbie/perltest2/',
+                                                              'month' => 'October',
+                                                              'author' => 'Barbie',
+                                                              'title' => 'Slides to Testing With Perl (HTML)'
+                                                            },
+                                                            {
+                                                              'desc' => 'Robbie\'s Little Helpers',
+                                                              'href' => 'talks/2008/09/robbie_bow_little_helpers.pdf',
+                                                              'month' => 'October',
+                                                              'author' => 'Robbie Bow',
+                                                              'title' => 'Slides for Robbie\'s Little Helpers (PDF)'
+                                                            },
+                                                            {
+                                                              'desc' => 'Logging with Perl',
+                                                              'href' => 'talks/2008/09/tom_hukins_logging_with_perl.pdf',
+                                                              'month' => 'October',
+                                                              'author' => 'Tom Hukins',
+                                                              'title' => 'Slides for Logging with Perl (PDF)'
+                                                            }
+                                                          ],
+                                               'year' => '2008'
+                                             }
+                                   },
+                         '2006' => {
+                                     '6' => {
+                                              'location' => 'SpiraHellic Multimedia',
+                                              'month' => 'June',
+                                              'desc' => 'We held our second technical meeting',
+                                              'date' => 'Tuesday, 13th June 2006',
+                                              'talks' => [
+                                                           {
+                                                             'desc' => 'Writing a perl/swig interface to the C++ CLucene search engine [slides as HTML or Powerpoint]',
+                                                             'href' => 'http://perl.dragonstaff.co.uk/perlCLucene.ppt',
+                                                             'month' => 'June',
+                                                             'author' => 'Peter Edwards',
+                                                             'title' => undef
+                                                           },
+                                                           {
+                                                             'desc' => 'Beautiful and Unique Snowflakes',
+                                                             'href' => 'http://shadowcatsystems.co.uk/cat-yapc/',
+                                                             'month' => 'June',
+                                                             'author' => 'Matt Trout',
+                                                             'title' => 'Slides for Matt\'s talks'
+                                                           },
+                                                           {
+                                                             'desc' => 'Better Living Through Perl',
+                                                             'month' => 'June',
+                                                             'author' => 'Michael Lush'
+                                                           },
+                                                           {
+                                                             'desc' => 'Tracing Code with Aspect.pm',
+                                                             'href' => 'talks/2006/06/tom_hukins_tracing_aspect.pdf',
+                                                             'month' => 'June',
+                                                             'author' => 'Tom Hukins',
+                                                             'title' => 'Slides for Tracing Code with Aspect.pm (PDF)'
+                                                           }
+                                                         ],
+                                              'year' => '2006'
+                                            },
+                                     '3' => {
+                                              'location' => 'SpiraHellic Multimedia',
+                                              'month' => 'March',
+                                              'desc' => 'We held our first technical meeting',
+                                              'date' => 'Tuesday, 14th March 2006',
+                                              'talks' => [
+                                                           {
+                                                             'desc' => 'Databases and Perl',
+                                                             'href' => 'talks/2006/03/dave_cross_databases_and_perl/',
+                                                             'month' => 'March',
+                                                             'author' => 'Dave Cross',
+                                                             'title' => 'Slides for Databases and Perl'
+                                                           },
+                                                           {
+                                                             'desc' => 'Gathering information from the Web with WWW::Mechanize',
+                                                             'href' => 'talks/2006/03/tom_hukins_www_mechanize.pdf',
+                                                             'month' => 'March',
+                                                             'author' => 'Tom Hukins',
+                                                             'title' => 'Slides for Gathering information from the Web with WWW::Mechanize'
+                                                           },
+                                                           {
+                                                             'desc' => 'Testing Legacy Code',
+                                                             'href' => 'talks/2006/03/nik_clayton_testing_legacy_code.pdf',
+                                                             'month' => 'March',
+                                                             'author' => 'Nik Clayton',
+                                                             'title' => 'Slides for Testing Legacy Code'
+                                                           },
+                                                           {
+                                                             'desc' => 'Integrating Data Sets to Bespoke Applications via XML::Twig',
+                                                             'month' => 'March',
+                                                             'author' => 'Rod Norfor'
+                                                           }
+                                                         ],
+                                              'year' => '2006'
+                                            },
+                                     '10' => {
+                                               'location' => 'SpiraHellic Multimedia',
+                                               'month' => 'October',
+                                               'desc' => 'Our third technical meeting took place',
+                                               'date' => 'Tuesday, 10th October 2006',
+                                               'talks' => [
+                                                            {
+                                                              'desc' => 'Doing something useful with the secrets of life: structural bioinformatics',
+                                                              'href' => 'talks/2006/10/lee_structural_bix.pdf',
+                                                              'month' => 'October',
+                                                              'author' => 'Lee Larcombe',
+                                                              'title' => 'Slides for Doing something useful with the secrets of life (PDF)'
+                                                            },
+                                                            {
+                                                              'desc' => 'Playing Games',
+                                                              'month' => 'October',
+                                                              'author' => 'Robbie Bow'
+                                                            },
+                                                            {
+                                                              'desc' => 'What I learned at YAPC Europe',
+                                                              'href' => 'talks/2006/10/learned_at_yapc.pdf',
+                                                              'month' => 'October',
+                                                              'author' => 'Tom Hukins',
+                                                              'title' => 'Slides for What I learned at YAPC Europe (PDF)'
+                                                            }
+                                                          ],
+                                               'year' => '2006'
+                                             }
+                                   },
+                         '2011' => {
+                                     '4' => {
+                                              'location' => 'the Open University',
+                                              'month' => 'April',
+                                              'desc' => 'Our fifteenth technical meeting took place place',
+                                              'date' => 'Tuesday, 12th April 2011',
+                                              'talks' => [
+                                                           {
+                                                             'desc' => 'Adding OAuth to the BBC World Service Twitter Feeder',
+                                                             'href' => 'http://perl.dragonstaff.co.uk/twitter_oauth/',
+                                                             'month' => 'April',
+                                                             'author' => 'Peter Edwards',
+                                                             'title' => 'Peter\'s presentation on OAuth'
+                                                           },
+                                                           {
+                                                             'desc' => 'Using XML::Compile to generate XML from schemas',
+                                                             'href' => 'talks/2011/04/xml_compile.pdf',
+                                                             'month' => 'April',
+                                                             'author' => 'Colin Bradford',
+                                                             'title' => 'Slides for Colin\'s presentation on XML::Compile'
+                                                           },
+                                                           {
+                                                             'desc' => 'Reusing Objects in your Modules',
+                                                             'month' => 'April',
+                                                             'author' => 'Tom Hukins'
+                                                           },
+                                                           {
+                                                             'desc' => 'Git and the MiltonKeynes.pm Web Site',
+                                                             'month' => 'April',
+                                                             'author' => 'Tom Hukins'
+                                                           },
+                                                           {
+                                                             'desc' => 'Identifying bugs in perl with git bisect',
+                                                             'month' => 'April',
+                                                             'author' => 'Tom Hukins'
+                                                           },
+                                                           {
+                                                             'desc' => 'Schedule::Pluggable',
+                                                             'href' => 'talks/2011/04/schedule_pluggable.pdf',
+                                                             'month' => 'April',
+                                                             'author' => 'Tony Edwardson',
+                                                             'title' => 'Slides for Tony\'s presentastion on Schedule::Pluggable'
+                                                           },
+                                                           {
+                                                             'desc' => 'Euclid, Socrates and Mill - Quality in Documentation',
+                                                             'month' => 'April',
+                                                             'author' => 'Matt Trout'
+                                                           }
+                                                         ],
+                                              'year' => '2011'
+                                            },
+                                     '9' => {
+                                              'location' => 'the Open University',
+                                              'month' => 'September',
+                                              'desc' => 'Our sixteenth technical meeting took place place',
+                                              'date' => 'Tuesday, 6th September 2011',
+                                              'talks' => [
+                                                           {
+                                                             'desc' => 'ElasticSearch',
+                                                             'href' => 'talks/2011/09/elasticsearch.pdf',
+                                                             'month' => 'September',
+                                                             'author' => 'Colin Bradford',
+                                                             'title' => 'Colin\'s presentation on Elastic Search'
+                                                           },
+                                                           {
+                                                             'desc' => 'An Introduction to Perl6',
+                                                             'href' => 'talks/2011/09/perl6.pdf',
+                                                             'month' => 'September',
+                                                             'author' => 'Tony Edwardson',
+                                                             'title' => 'Tony\'s presentation on Perl 6'
+                                                           },
+                                                           {
+                                                             'desc' => 'Testing for Systems administration',
+                                                             'month' => 'September',
+                                                             'author' => 'Tom Hukins'
+                                                           },
+                                                           {
+                                                             'desc' => 'Managing Multiple Perl installations in your $HOME with App::perlbrew',
+                                                             'href' => 'talks/2011/09/perlbrew.pdf',
+                                                             'month' => 'September',
+                                                             'author' => 'Tony Edwardson',
+                                                             'title' => 'Tony\'s presentation on App::perlbrew'
+                                                           }
+                                                         ],
+                                              'year' => '2011'
+                                            }
+                                   },
+                         '2009' => {
+                                     '4' => {
+                                              'location' => 'the Open University',
+                                              'month' => 'April',
+                                              'desc' => 'We held our ninth technical meeting',
+                                              'date' => 'Thursday, 16th April 2009',
+                                              'talks' => [
+                                                           {
+                                                             'desc' => 'Distributed caching with memcached to improve performance and scale web applications',
+                                                             'href' => 'talks/2009/04/colin_bradford_memcached.pdf',
+                                                             'month' => 'April',
+                                                             'author' => 'Colin Bradford',
+                                                             'title' => 'Slides for Colin\'s talk about memcached'
+                                                           },
+                                                           {
+                                                             'desc' => 'Developing cross platform GUI applications with WxWidgets',
+                                                             'href' => 'http://perl.dragonstaff.co.uk/mkpm_wxwidgets.pdf',
+                                                             'month' => 'April',
+                                                             'author' => 'Peter Edwards',
+                                                             'title' => 'Slides for Peter\'s talk about WxWidgets'
+                                                           },
+                                                           {
+                                                             'desc' => 'Moose - the new way to use Object orientation from Perl 5',
+                                                             'href' => 'talks/2009/04/tony_edwardson_moose_introduction.pdf',
+                                                             'month' => 'April',
+                                                             'author' => 'Tony Edwardson',
+                                                             'title' => 'Slides for Tony\'s talk about Moose'
+                                                           }
+                                                         ],
+                                              'year' => '2009'
+                                            },
+                                     '1' => {
+                                              'location' => 'the Open University',
+                                              'month' => 'January',
+                                              'desc' => 'We held our eighth technical meeting',
+                                              'date' => 'Tuesday, 13th January 2009',
+                                              'talks' => [
+                                                           {
+                                                             'desc' => 'Online Retail with Perl',
+                                                             'href' => 'http://www.pennysarcade.co.uk/',
+                                                             'month' => 'January',
+                                                             'author' => 'Jon Allen',
+                                                             'title' => 'Penny\'s Arcade Online Shop'
+                                                           },
+                                                           {
+                                                             'desc' => 'Specifying Module Versions with only.pm',
+                                                             'href' => 'talks/2009/01/tony_edwardson_only.pdf',
+                                                             'month' => 'January',
+                                                             'author' => 'Tony Edwardson',
+                                                             'title' => 'Slides for Tony\'s talk on only.pm'
+                                                           },
+                                                           {
+                                                             'desc' => 'Chart::Gnuplot',
+                                                             'href' => 'talks/2009/01/rod_norfor_chart_gnuplot.pdf',
+                                                             'month' => 'January',
+                                                             'author' => 'Rod Norfor',
+                                                             'title' => 'Slides for Rod\'s talk on Chart::Gnuplot'
+                                                           },
+                                                           {
+                                                             'desc' => 'memcached',
+                                                             'href' => 'talks/2009/01/colin_bradford_memcached.pdf',
+                                                             'month' => 'January',
+                                                             'author' => 'Colin Bradford',
+                                                             'title' => 'Slides for Colin\'s talk on memcached'
+                                                           },
+                                                           {
+                                                             'desc' => 'Creating PDF files with Catalyst',
+                                                             'href' => 'http://www.pennysarcade.co.uk/files/Creating_PDF_files_with_Catalyst.pdf',
+                                                             'month' => 'January',
+                                                             'author' => 'Jon Allen',
+                                                             'title' => 'Slides for Jon\'s talk on Creating PDF files with Catalyst'
+                                                           },
+                                                           {
+                                                             'desc' => 'Exceptions',
+                                                             'href' => 'talks/2009/01/peter_edwards_exceptions.pdf',
+                                                             'month' => 'January',
+                                                             'author' => 'Peter Edwards',
+                                                             'title' => 'Slides for Peter\'s talk on Exceptions'
+                                                           },
+                                                           {
+                                                             'desc' => 'Building Your Own Perl',
+                                                             'month' => 'January',
+                                                             'author' => 'Tom Hukins'
+                                                           }
+                                                         ],
+                                              'year' => '2009'
+                                            },
+                                     '7' => {
+                                              'location' => 'the Open University:',
+                                              'month' => 'July',
+                                              'desc' => 'Our tenth technical meeting took place',
+                                              'date' => 'Tuesday, 14th July 2009',
+                                              'talks' => [
+                                                           {
+                                                             'desc' => 'Data Warehousing with Perl: Archiving and analysing large data sets from a popular online business',
+                                                             'href' => 'talks/2009/07/colin_bradford_data_warehousing.pdf',
+                                                             'month' => 'July',
+                                                             'author' => 'Colin Bradford',
+                                                             'title' => 'Slides for Colin\'s talk about Data Warehousing with Perl'
+                                                           },
+                                                           {
+                                                             'desc' => 'Using local::lib to let users manage modules without needing root access',
+                                                             'href' => 'talks/2009/07/oliver_gorwits_local_lib.pdf',
+                                                             'month' => 'July',
+                                                             'author' => 'Oliver Gorwits',
+                                                             'title' => 'Slides for Oliver\'s talk about local::lib'
+                                                           },
+                                                           {
+                                                             'desc' => 'The future of DBIx::Class, a database object relational mapper for Perl',
+                                                             'href' => 'http://shadowcat.co.uk/catalyst/talks/-npw-2009/future-of-dbix-class.xul',
+                                                             'month' => 'July',
+                                                             'author' => 'Matt Trout',
+                                                             'title' => 'XUL Presentation of Matt\'s talk for Mozilla based browsers'
+                                                           },
+                                                           {
+                                                             'desc' => 'Using WWW::Mechanize to automate interacting with Web sites, from the perspective of a non-Perl programmer',
+                                                             'month' => 'July',
+                                                             'author' => 'Ian Cameron'
+                                                           },
+                                                           {
+                                                             'desc' => 'Managing database queries with SQL::Library',
+                                                             'month' => 'July',
+                                                             'author' => 'Tony Edwardson'
+                                                           }
+                                                         ],
+                                              'year' => '2009'
+                                            },
+                                     '10' => {
+                                               'location' => 'the Open University:',
+                                               'month' => 'October',
+                                               'desc' => 'Our eleventh technical meeting took place',
+                                               'date' => 'Thursday, 15th October 2009',
+                                               'talks' => [
+                                                            {
+                                                              'desc' => 'Teaching Perl - Experiences, Anecdotes and Vague Conclusions',
+                                                              'href' => 'http://www.slideshare.net/davorg/perl-training',
+                                                              'month' => 'October',
+                                                              'author' => 'Dave Cross',
+                                                              'title' => 'Slides for Dave\'s talk about Teaching Perl'
+                                                            },
+                                                            {
+                                                              'desc' => 'How I Maintain my CPAN Modules',
+                                                              'href' => 'http://www.slideshare.net/davorg/cpan-module-maintenance-2243226',
+                                                              'month' => 'October',
+                                                              'author' => 'Dave Cross',
+                                                              'title' => 'Slides for Dave\'s talk about Maintaining CPAN Modules'
+                                                            },
+                                                            {
+                                                              'desc' => 'Load Balancing with Perlbal',
+                                                              'href' => 'talks/2009/10/katherine_spice_perlbal.pdf',
+                                                              'month' => 'October',
+                                                              'author' => 'Katherine Spice',
+                                                              'title' => 'Slides for Katherine\'s talk about Perlbal'
+                                                            },
+                                                            {
+                                                              'desc' => 'Using Moose to Build Object Oriented Applications',
+                                                              'href' => 'talks/2009/10/tony_edwardson_moose.pdf',
+                                                              'month' => 'October',
+                                                              'author' => 'Tony Edwardson',
+                                                              'title' => 'Slides for Tony\'s talk about Moose'
+                                                            },
+                                                            {
+                                                              'desc' => 'A New User\'s Perspective on Catalyst',
+                                                              'href' => 'talks/2009/10/benjamin_martin_catalyst.pdf',
+                                                              'month' => 'October',
+                                                              'author' => 'Benjamin Martin',
+                                                              'title' => 'Slides for Benjamin\'s talk about Catalyst'
+                                                            }
+                                                          ],
+                                               'year' => '2009'
+                                             }
+                                   }
+                       },
+          'by_author' => {
+                           'Adam Lowe' => {
+                                            '2007' => {
+                                                        '11' => [
+                                                                  {
+                                                                    'month' => 'November',
+                                                                    'href' => 'http://www.tnmoc.co.uk/',
+                                                                    'desc' => 'Projects at the National Museum of Computing',
+                                                                    'title' => 'The National Museum of Computing\'s Web Site',
+                                                                    'author' => 'Adam Lowe'
+                                                                  }
+                                                                ]
+                                                      }
+                                          },
+                           'Lee Larcombe' => {
+                                               '2006' => {
+                                                           '10' => [
+                                                                     {
+                                                                       'month' => 'October',
+                                                                       'href' => 'talks/2006/10/lee_structural_bix.pdf',
+                                                                       'desc' => 'Doing something useful with the secrets of life: structural bioinformatics',
+                                                                       'title' => 'Slides for Doing something useful with the secrets of life (PDF)',
+                                                                       'author' => 'Lee Larcombe'
+                                                                     }
+                                                                   ]
+                                                         }
+                                             },
+                           'Barbie' => {
+                                         '2007' => {
+                                                     '4' => [
+                                                              {
+                                                                'month' => 'April',
+                                                                'href' => 'http://birmingham.pm.org/talks/barbie/selenium/',
+                                                                'desc' => 'Selenium - An Introduction to Web testing',
+                                                                'title' => 'Talk Slides (HTML)',
+                                                                'author' => 'Barbie'
+                                                              }
+                                                            ]
+                                                   },
+                                         '2008' => {
+                                                     '10' => [
+                                                               {
+                                                                 'month' => 'October',
+                                                                 'href' => 'http://birmingham.pm.org/talks/barbie/perltest2/',
+                                                                 'desc' => 'Testing With Perl',
+                                                                 'title' => 'Slides to Testing With Perl (HTML)',
+                                                                 'author' => 'Barbie'
+                                                               }
+                                                             ]
+                                                   }
+                                       },
+                           'Rod Norfor' => {
+                                             '2006' => {
+                                                         '3' => [
+                                                                  {
+                                                                    'month' => 'March',
+                                                                    'desc' => 'Integrating Data Sets to Bespoke Applications via XML::Twig',
+                                                                    'author' => 'Rod Norfor'
+                                                                  }
+                                                                ]
+                                                       },
+                                             '2009' => {
+                                                         '1' => [
+                                                                  {
+                                                                    'month' => 'January',
+                                                                    'href' => 'talks/2009/01/rod_norfor_chart_gnuplot.pdf',
+                                                                    'desc' => 'Chart::Gnuplot',
+                                                                    'title' => 'Slides for Rod\'s talk on Chart::Gnuplot',
+                                                                    'author' => 'Rod Norfor'
+                                                                  }
+                                                                ]
+                                                       }
+                                           },
+                           'Katherine Spice' => {
+                                                  '2009' => {
+                                                              '10' => [
+                                                                        {
+                                                                          'month' => 'October',
+                                                                          'href' => 'talks/2009/10/katherine_spice_perlbal.pdf',
+                                                                          'desc' => 'Load Balancing with Perlbal',
+                                                                          'title' => 'Slides for Katherine\'s talk about Perlbal',
+                                                                          'author' => 'Katherine Spice'
+                                                                        }
+                                                                      ]
+                                                            }
+                                                },
+                           'Ziya Suzen' => {
+                                             '2010' => {
+                                                         '2' => [
+                                                                  {
+                                                                    'month' => 'February',
+                                                                    'href' => 'talks/2010/02/ziya_suzen_android_development.pdf',
+                                                                    'desc' => 'Practical Android Development - An Introduction',
+                                                                    'title' => 'Slides for Ziya\'s talk about Android development',
+                                                                    'author' => 'Ziya Suzen'
+                                                                  }
+                                                                ]
+                                                       }
+                                           },
+                           'Tom Hukins' => {
+                                             '2007' => {
+                                                         '4' => [
+                                                                  {
+                                                                    'month' => 'April',
+                                                                    'desc' => 'Testing When You Don\'t Have Time',
+                                                                    'author' => 'Tom Hukins'
+                                                                  }
+                                                                ]
+                                                       },
+                                             '2010' => {
+                                                         '2' => [
+                                                                  {
+                                                                    'month' => 'February',
+                                                                    'href' => 'http://www.presentingperl.org/lpw2009/repeat-yourself/',
+                                                                    'desc' => 'Do Repeat Yourself. Sometimes.',
+                                                                    'title' => 'Video of Tom\'s talk about repeating ideas',
+                                                                    'author' => 'Tom Hukins'
+                                                                  }
+                                                                ]
+                                                       },
+                                             '2008' => {
+                                                         '7' => [
+                                                                  {
+                                                                    'month' => 'July',
+                                                                    'href' => 'talks/2008/07/tom_hukins_dbix_class_introduction.pdf',
+                                                                    'desc' => 'An Introduction to DBIx::Class',
+                                                                    'title' => 'Slides for An Introduction to DBIx::Class (PDF)',
+                                                                    'author' => 'Tom Hukins'
+                                                                  }
+                                                                ],
+                                                         '10' => [
+                                                                   {
+                                                                     'month' => 'October',
+                                                                     'href' => 'talks/2008/09/tom_hukins_logging_with_perl.pdf',
+                                                                     'desc' => 'Logging with Perl',
+                                                                     'title' => 'Slides for Logging with Perl (PDF)',
+                                                                     'author' => 'Tom Hukins'
+                                                                   }
+                                                                 ]
+                                                       },
+                                             '2006' => {
+                                                         '6' => [
+                                                                  {
+                                                                    'month' => 'June',
+                                                                    'href' => 'talks/2006/06/tom_hukins_tracing_aspect.pdf',
+                                                                    'desc' => 'Tracing Code with Aspect.pm',
+                                                                    'title' => 'Slides for Tracing Code with Aspect.pm (PDF)',
+                                                                    'author' => 'Tom Hukins'
+                                                                  }
+                                                                ],
+                                                         '3' => [
+                                                                  {
+                                                                    'month' => 'March',
+                                                                    'href' => 'talks/2006/03/tom_hukins_www_mechanize.pdf',
+                                                                    'desc' => 'Gathering information from the Web with WWW::Mechanize',
+                                                                    'title' => 'Slides for Gathering information from the Web with WWW::Mechanize',
+                                                                    'author' => 'Tom Hukins'
+                                                                  }
+                                                                ],
+                                                         '10' => [
+                                                                   {
+                                                                     'month' => 'October',
+                                                                     'href' => 'talks/2006/10/learned_at_yapc.pdf',
+                                                                     'desc' => 'What I learned at YAPC Europe',
+                                                                     'title' => 'Slides for What I learned at YAPC Europe (PDF)',
+                                                                     'author' => 'Tom Hukins'
+                                                                   }
+                                                                 ]
+                                                       },
+                                             '2011' => {
+                                                         '4' => [
+                                                                  {
+                                                                    'month' => 'April',
+                                                                    'desc' => 'Reusing Objects in your Modules',
+                                                                    'author' => 'Tom Hukins'
+                                                                  },
+                                                                  {
+                                                                    'month' => 'April',
+                                                                    'desc' => 'Git and the MiltonKeynes.pm Web Site',
+                                                                    'author' => 'Tom Hukins'
+                                                                  },
+                                                                  {
+                                                                    'month' => 'April',
+                                                                    'desc' => 'Identifying bugs in perl with git bisect',
+                                                                    'author' => 'Tom Hukins'
+                                                                  }
+                                                                ],
+                                                         '9' => [
+                                                                  {
+                                                                    'month' => 'September',
+                                                                    'desc' => 'Testing for Systems administration',
+                                                                    'author' => 'Tom Hukins'
+                                                                  }
+                                                                ]
+                                                       },
+                                             '2009' => {
+                                                         '1' => [
+                                                                  {
+                                                                    'month' => 'January',
+                                                                    'desc' => 'Building Your Own Perl',
+                                                                    'author' => 'Tom Hukins'
+                                                                  }
+                                                                ]
+                                                       }
+                                           },
+                           'Ian Cameron' => {
+                                              '2009' => {
+                                                          '7' => [
+                                                                   {
+                                                                     'month' => 'July',
+                                                                     'desc' => 'Using WWW::Mechanize to automate interacting with Web sites, from the perspective of a non-Perl programmer',
+                                                                     'author' => 'Ian Cameron'
+                                                                   }
+                                                                 ]
+                                                        }
+                                            },
+                           'Matt Trout' => {
+                                             '2006' => {
+                                                         '6' => [
+                                                                  {
+                                                                    'month' => 'June',
+                                                                    'href' => 'http://shadowcatsystems.co.uk/cat-yapc/',
+                                                                    'desc' => 'Beautiful and Unique Snowflakes',
+                                                                    'title' => 'Slides for Matt\'s talks',
+                                                                    'author' => 'Matt Trout'
+                                                                  }
+                                                                ]
+                                                       },
+                                             '2011' => {
+                                                         '4' => [
+                                                                  {
+                                                                    'month' => 'April',
+                                                                    'desc' => 'Euclid, Socrates and Mill - Quality in Documentation',
+                                                                    'author' => 'Matt Trout'
+                                                                  }
+                                                                ]
+                                                       },
+                                             '2009' => {
+                                                         '7' => [
+                                                                  {
+                                                                    'month' => 'July',
+                                                                    'href' => 'http://shadowcat.co.uk/catalyst/talks/-npw-2009/future-of-dbix-class.xul',
+                                                                    'desc' => 'The future of DBIx::Class, a database object relational mapper for Perl',
+                                                                    'title' => 'XUL Presentation of Matt\'s talk for Mozilla based browsers',
+                                                                    'author' => 'Matt Trout'
+                                                                  }
+                                                                ]
+                                                       }
+                                           },
+                           'Nik Clayton' => {
+                                              '2006' => {
+                                                          '3' => [
+                                                                   {
+                                                                     'month' => 'March',
+                                                                     'href' => 'talks/2006/03/nik_clayton_testing_legacy_code.pdf',
+                                                                     'desc' => 'Testing Legacy Code',
+                                                                     'title' => 'Slides for Testing Legacy Code',
+                                                                     'author' => 'Nik Clayton'
+                                                                   }
+                                                                 ]
+                                                        }
+                                            },
+                           'Tony Edwardson' => {
+                                                 '2010' => {
+                                                             '6' => [
+                                                                      {
+                                                                        'month' => 'June',
+                                                                        'href' => 'talks/2010/06/tony_edwardson_learning_from_previous_meetings.pdf',
+                                                                        'desc' => 'Using What I Learned From Previous Technical Meetings',
+                                                                        'title' => 'Slides for Tony\'s talk about learning from previous technical meetings',
+                                                                        'author' => 'Tony Edwardson'
+                                                                      }
+                                                                    ],
+                                                             '10' => [
+                                                                       {
+                                                                         'month' => 'October',
+                                                                         'href' => 'talks/2010/10/PAR_Talk.pdf',
+                                                                         'desc' => 'Using PAR to Package and Deploy Perl Applications',
+                                                                         'title' => 'Slides for Tony\'s talk about PAR',
+                                                                         'author' => 'Tony Edwardson'
+                                                                       }
+                                                                     ]
+                                                           },
+                                                 '2008' => {
+                                                             '7' => [
+                                                                      {
+                                                                        'month' => 'July',
+                                                                        'href' => 'talks/2008/07/tony_edwardson_source_filters.pdf',
+                                                                        'desc' => 'Source Filters',
+                                                                        'title' => 'Slides for Source Filters (PDF)',
+                                                                        'author' => 'Tony Edwardson'
+                                                                      }
+                                                                    ]
+                                                           },
+                                                 '2011' => {
+                                                             '4' => [
+                                                                      {
+                                                                        'month' => 'April',
+                                                                        'href' => 'talks/2011/04/schedule_pluggable.pdf',
+                                                                        'desc' => 'Schedule::Pluggable',
+                                                                        'title' => 'Slides for Tony\'s presentastion on Schedule::Pluggable',
+                                                                        'author' => 'Tony Edwardson'
+                                                                      }
+                                                                    ],
+                                                             '9' => [
+                                                                      {
+                                                                        'month' => 'September',
+                                                                        'href' => 'talks/2011/09/perl6.pdf',
+                                                                        'desc' => 'An Introduction to Perl6',
+                                                                        'title' => 'Tony\'s presentation on Perl 6',
+                                                                        'author' => 'Tony Edwardson'
+                                                                      },
+                                                                      {
+                                                                        'month' => 'September',
+                                                                        'href' => 'talks/2011/09/perlbrew.pdf',
+                                                                        'desc' => 'Managing Multiple Perl installations in your $HOME with App::perlbrew',
+                                                                        'title' => 'Tony\'s presentation on App::perlbrew',
+                                                                        'author' => 'Tony Edwardson'
+                                                                      }
+                                                                    ]
+                                                           },
+                                                 '2009' => {
+                                                             '4' => [
+                                                                      {
+                                                                        'month' => 'April',
+                                                                        'href' => 'talks/2009/04/tony_edwardson_moose_introduction.pdf',
+                                                                        'desc' => 'Moose - the new way to use Object orientation from Perl 5',
+                                                                        'title' => 'Slides for Tony\'s talk about Moose',
+                                                                        'author' => 'Tony Edwardson'
+                                                                      }
+                                                                    ],
+                                                             '1' => [
+                                                                      {
+                                                                        'month' => 'January',
+                                                                        'href' => 'talks/2009/01/tony_edwardson_only.pdf',
+                                                                        'desc' => 'Specifying Module Versions with only.pm',
+                                                                        'title' => 'Slides for Tony\'s talk on only.pm',
+                                                                        'author' => 'Tony Edwardson'
+                                                                      }
+                                                                    ],
+                                                             '7' => [
+                                                                      {
+                                                                        'month' => 'July',
+                                                                        'desc' => 'Managing database queries with SQL::Library',
+                                                                        'author' => 'Tony Edwardson'
+                                                                      }
+                                                                    ],
+                                                             '10' => [
+                                                                       {
+                                                                         'month' => 'October',
+                                                                         'href' => 'talks/2009/10/tony_edwardson_moose.pdf',
+                                                                         'desc' => 'Using Moose to Build Object Oriented Applications',
+                                                                         'title' => 'Slides for Tony\'s talk about Moose',
+                                                                         'author' => 'Tony Edwardson'
+                                                                       }
+                                                                     ]
+                                                           }
+                                               },
+                           'Benjamin Martin' => {
+                                                  '2009' => {
+                                                              '10' => [
+                                                                        {
+                                                                          'month' => 'October',
+                                                                          'href' => 'talks/2009/10/benjamin_martin_catalyst.pdf',
+                                                                          'desc' => 'A New User\'s Perspective on Catalyst',
+                                                                          'title' => 'Slides for Benjamin\'s talk about Catalyst',
+                                                                          'author' => 'Benjamin Martin'
+                                                                        }
+                                                                      ]
+                                                            }
+                                                },
+                           'Dave Cross' => {
+                                             '2007' => {
+                                                         '11' => [
+                                                                   {
+                                                                     'month' => 'November',
+                                                                     'href' => 'talks/2007/11/dave_cross_tt_intro/',
+                                                                     'desc' => 'An Introduction to the Template Toolkit',
+                                                                     'title' => 'Slides for Introduction to Template Toolkit (HTML)',
+                                                                     'author' => 'Dave Cross'
+                                                                   }
+                                                                 ]
+                                                       },
+                                             '2010' => {
+                                                         '10' => [
+                                                                   {
+                                                                     'month' => 'October',
+                                                                     'href' => 'talks/2010/10/evolving_moose.pdf',
+                                                                     'desc' => 'Evolving Software with Moose',
+                                                                     'title' => 'Slides for Dave\'s talk about developing with Moose',
+                                                                     'author' => 'Dave Cross'
+                                                                   }
+                                                                 ]
+                                                       },
+                                             '2008' => {
+                                                         '10' => [
+                                                                   {
+                                                                     'month' => 'October',
+                                                                     'href' => 'talks/2008/09/dave_cross_perl_in_rpm_land.pdf',
+                                                                     'desc' => 'Perl in RPM Land',
+                                                                     'title' => 'Slides for Perl in RPM Land',
+                                                                     'author' => 'Dave Cross'
+                                                                   }
+                                                                 ]
+                                                       },
+                                             '2006' => {
+                                                         '3' => [
+                                                                  {
+                                                                    'month' => 'March',
+                                                                    'href' => 'talks/2006/03/dave_cross_databases_and_perl/',
+                                                                    'desc' => 'Databases and Perl',
+                                                                    'title' => 'Slides for Databases and Perl',
+                                                                    'author' => 'Dave Cross'
+                                                                  }
+                                                                ]
+                                                       },
+                                             '2009' => {
+                                                         '10' => [
+                                                                   {
+                                                                     'month' => 'October',
+                                                                     'href' => 'http://www.slideshare.net/davorg/perl-training',
+                                                                     'desc' => 'Teaching Perl - Experiences, Anecdotes and Vague Conclusions',
+                                                                     'title' => 'Slides for Dave\'s talk about Teaching Perl',
+                                                                     'author' => 'Dave Cross'
+                                                                   },
+                                                                   {
+                                                                     'month' => 'October',
+                                                                     'href' => 'http://www.slideshare.net/davorg/cpan-module-maintenance-2243226',
+                                                                     'desc' => 'How I Maintain my CPAN Modules',
+                                                                     'title' => 'Slides for Dave\'s talk about Maintaining CPAN Modules',
+                                                                     'author' => 'Dave Cross'
+                                                                   }
+                                                                 ]
+                                                       }
+                                           },
+                           'Jon Allen' => {
+                                            '2010' => {
+                                                        '6' => [
+                                                                 {
+                                                                   'month' => 'June',
+                                                                   'href' => 'http://perl.jonallen.info/talks/couchdb-introduction',
+                                                                   'desc' => 'Introduction to CouchDB',
+                                                                   'title' => 'Slides for Jon\'s talk about CouchDB',
+                                                                   'author' => 'Jon Allen'
+                                                                 }
+                                                               ]
+                                                      },
+                                            '2009' => {
+                                                        '1' => [
+                                                                 {
+                                                                   'month' => 'January',
+                                                                   'href' => 'http://www.pennysarcade.co.uk/',
+                                                                   'desc' => 'Online Retail with Perl',
+                                                                   'title' => 'Penny\'s Arcade Online Shop',
+                                                                   'author' => 'Jon Allen'
+                                                                 },
+                                                                 {
+                                                                   'month' => 'January',
+                                                                   'href' => 'http://www.pennysarcade.co.uk/files/Creating_PDF_files_with_Catalyst.pdf',
+                                                                   'desc' => 'Creating PDF files with Catalyst',
+                                                                   'title' => 'Slides for Jon\'s talk on Creating PDF files with Catalyst',
+                                                                   'author' => 'Jon Allen'
+                                                                 }
+                                                               ]
+                                                      }
+                                          },
+                           'Paul Mooney' => {
+                                              '2010' => {
+                                                          '6' => [
+                                                                   {
+                                                                     'month' => 'June',
+                                                                     'href' => 'talks/2010/06/paul_mooney_stomp_moosex_workers.pdf',
+                                                                     'desc' => 'Catalyst::Engine::Stomp and MooseX::Workers',
+                                                                     'title' => 'Slides for Paul\'s talk about Catalyst::Engine::Stomp and MooseX::Workers',
+                                                                     'author' => 'Paul Mooney'
+                                                                   }
+                                                                 ]
+                                                        }
+                                            },
+                           'Colin Bradford' => {
+                                                 '2010' => {
+                                                             '10' => [
+                                                                       {
+                                                                         'month' => 'October',
+                                                                         'href' => 'talks/2010/10/poe-pres.pdf',
+                                                                         'desc' => 'An introduction to writing web servers with POE',
+                                                                         'title' => 'Slides for Colin\'s talk about POE',
+                                                                         'author' => 'Colin Bradford'
+                                                                       }
+                                                                     ],
+                                                             '2' => [
+                                                                      {
+                                                                        'month' => 'February',
+                                                                        'href' => 'talks/2010/02/colin_bradford_http_async.pdf',
+                                                                        'desc' => 'Using HTTP::Async for Parallel HTTP Requests',
+                                                                        'title' => 'Slides for Colin\'s talk about HTTP::Async',
+                                                                        'author' => 'Colin Bradford'
+                                                                      }
+                                                                    ]
+                                                           },
+                                                 '2011' => {
+                                                             '4' => [
+                                                                      {
+                                                                        'month' => 'April',
+                                                                        'href' => 'talks/2011/04/xml_compile.pdf',
+                                                                        'desc' => 'Using XML::Compile to generate XML from schemas',
+                                                                        'title' => 'Slides for Colin\'s presentation on XML::Compile',
+                                                                        'author' => 'Colin Bradford'
+                                                                      }
+                                                                    ],
+                                                             '9' => [
+                                                                      {
+                                                                        'month' => 'September',
+                                                                        'href' => 'talks/2011/09/elasticsearch.pdf',
+                                                                        'desc' => 'ElasticSearch',
+                                                                        'title' => 'Colin\'s presentation on Elastic Search',
+                                                                        'author' => 'Colin Bradford'
+                                                                      }
+                                                                    ]
+                                                           },
+                                                 '2009' => {
+                                                             '4' => [
+                                                                      {
+                                                                        'month' => 'April',
+                                                                        'href' => 'talks/2009/04/colin_bradford_memcached.pdf',
+                                                                        'desc' => 'Distributed caching with memcached to improve performance and scale web applications',
+                                                                        'title' => 'Slides for Colin\'s talk about memcached',
+                                                                        'author' => 'Colin Bradford'
+                                                                      }
+                                                                    ],
+                                                             '1' => [
+                                                                      {
+                                                                        'month' => 'January',
+                                                                        'href' => 'talks/2009/01/colin_bradford_memcached.pdf',
+                                                                        'desc' => 'memcached',
+                                                                        'title' => 'Slides for Colin\'s talk on memcached',
+                                                                        'author' => 'Colin Bradford'
+                                                                      }
+                                                                    ],
+                                                             '7' => [
+                                                                      {
+                                                                        'month' => 'July',
+                                                                        'href' => 'talks/2009/07/colin_bradford_data_warehousing.pdf',
+                                                                        'desc' => 'Data Warehousing with Perl: Archiving and analysing large data sets from a popular online business',
+                                                                        'title' => 'Slides for Colin\'s talk about Data Warehousing with Perl',
+                                                                        'author' => 'Colin Bradford'
+                                                                      }
+                                                                    ]
+                                                           }
+                                               },
+                           'Robbie Bow' => {
+                                             '2008' => {
+                                                         '10' => [
+                                                                   {
+                                                                     'month' => 'October',
+                                                                     'href' => 'talks/2008/09/robbie_bow_sql_and_mysql.pdf',
+                                                                     'desc' => 'SQL and MySQL',
+                                                                     'title' => 'Slides for SQL and MySQL (PDF)',
+                                                                     'author' => 'Robbie Bow'
+                                                                   },
+                                                                   {
+                                                                     'month' => 'October',
+                                                                     'href' => 'talks/2008/09/robbie_bow_little_helpers.pdf',
+                                                                     'desc' => 'Robbie\'s Little Helpers',
+                                                                     'title' => 'Slides for Robbie\'s Little Helpers (PDF)',
+                                                                     'author' => 'Robbie Bow'
+                                                                   }
+                                                                 ]
+                                                       },
+                                             '2006' => {
+                                                         '10' => [
+                                                                   {
+                                                                     'month' => 'October',
+                                                                     'desc' => 'Playing Games',
+                                                                     'author' => 'Robbie Bow'
+                                                                   }
+                                                                 ]
+                                                       }
+                                           },
+                           'Nick Morrott' => {
+                                               '2010' => {
+                                                           '10' => [
+                                                                     {
+                                                                       'month' => 'October',
+                                                                       'href' => 'talks/2010/10/XMLTV_Talk_MKPM_October_2010.pdf',
+                                                                       'desc' => 'TV listings with XMLTV',
+                                                                       'title' => 'Slides for Nick\'s talk about XMLTV',
+                                                                       'author' => 'Nick Morrott'
+                                                                     }
+                                                                   ]
+                                                         }
+                                             },
+                           'Oliver Gorwits' => {
+                                                 '2010' => {
+                                                             '10' => [
+                                                                       {
+                                                                         'month' => 'October',
+                                                                         'href' => 'talks/2010/10/Exchange-SOAP.pdf',
+                                                                         'desc' => 'Microsoft Exchange and SOAP - my two great loves',
+                                                                         'title' => 'Slides for Oliver\'s talk about Exchange web services',
+                                                                         'author' => 'Oliver Gorwits'
+                                                                       }
+                                                                     ],
+                                                             '2' => [
+                                                                      {
+                                                                        'month' => 'February',
+                                                                        'href' => 'talks/2010/02/oliver_gorwits_conntrack_netfilter_netflow_nat_linux.pdf',
+                                                                        'desc' => 'conntrack, Netfilter, NetFlow and NAT under Linux',
+                                                                        'title' => 'Slides for Oliver\'s talk about NAT on Linux',
+                                                                        'author' => 'Oliver Gorwits'
+                                                                      }
+                                                                    ]
+                                                           },
+                                                 '2008' => {
+                                                             '7' => [
+                                                                      {
+                                                                        'month' => 'July',
+                                                                        'href' => 'talks/2008/07/oliver_gorwits_holiday.pdf',
+                                                                        'desc' => 'What I Did On My Holidays',
+                                                                        'title' => 'Slides for What I Did On My Holidays (PDF)',
+                                                                        'author' => 'Oliver Gorwits'
+                                                                      }
+                                                                    ]
+                                                           },
+                                                 '2009' => {
+                                                             '7' => [
+                                                                      {
+                                                                        'month' => 'July',
+                                                                        'href' => 'talks/2009/07/oliver_gorwits_local_lib.pdf',
+                                                                        'desc' => 'Using local::lib to let users manage modules without needing root access',
+                                                                        'title' => 'Slides for Oliver\'s talk about local::lib',
+                                                                        'author' => 'Oliver Gorwits'
+                                                                      }
+                                                                    ]
+                                                           }
+                                               },
+                           'Peter Edwards' => {
+                                                '2007' => {
+                                                            '4' => [
+                                                                     {
+                                                                       'month' => 'April',
+                                                                       'href' => 'http://perl.dragonstaff.co.uk/mkpm2/index.htm',
+                                                                       'desc' => 'Desperately Seeking a Lightweight Perl web Framework',
+                                                                       'title' => 'Talk Slides (HTML)',
+                                                                       'author' => 'Peter Edwards'
+                                                                     }
+                                                                   ]
+                                                          },
+                                                '2008' => {
+                                                            '7' => [
+                                                                     {
+                                                                       'month' => 'July',
+                                                                       'href' => 'http://perl.dragonstaff.co.uk/mkpm3/real_world_xplatform_testing_files/frame.htm',
+                                                                       'desc' => 'Real Life Cross-Platform Testing',
+                                                                       'title' => 'Slides for Real Life Cross-Platform Testing (HTML saved from Powerpoint)',
+                                                                       'author' => 'Peter Edwards'
+                                                                     }
+                                                                   ]
+                                                          },
+                                                '2006' => {
+                                                            '6' => [
+                                                                     {
+                                                                       'month' => 'June',
+                                                                       'href' => 'http://perl.dragonstaff.co.uk/perlCLucene.ppt',
+                                                                       'desc' => 'Writing a perl/swig interface to the C++ CLucene search engine [slides as HTML or Powerpoint]',
+                                                                       'title' => undef,
+                                                                       'author' => 'Peter Edwards'
+                                                                     }
+                                                                   ]
+                                                          },
+                                                '2011' => {
+                                                            '4' => [
+                                                                     {
+                                                                       'month' => 'April',
+                                                                       'href' => 'http://perl.dragonstaff.co.uk/twitter_oauth/',
+                                                                       'desc' => 'Adding OAuth to the BBC World Service Twitter Feeder',
+                                                                       'title' => 'Peter\'s presentation on OAuth',
+                                                                       'author' => 'Peter Edwards'
+                                                                     }
+                                                                   ]
+                                                          },
+                                                '2009' => {
+                                                            '4' => [
+                                                                     {
+                                                                       'month' => 'April',
+                                                                       'href' => 'http://perl.dragonstaff.co.uk/mkpm_wxwidgets.pdf',
+                                                                       'desc' => 'Developing cross platform GUI applications with WxWidgets',
+                                                                       'title' => 'Slides for Peter\'s talk about WxWidgets',
+                                                                       'author' => 'Peter Edwards'
+                                                                     }
+                                                                   ],
+                                                            '1' => [
+                                                                     {
+                                                                       'month' => 'January',
+                                                                       'href' => 'talks/2009/01/peter_edwards_exceptions.pdf',
+                                                                       'desc' => 'Exceptions',
+                                                                       'title' => 'Slides for Peter\'s talk on Exceptions',
+                                                                       'author' => 'Peter Edwards'
+                                                                     }
+                                                                   ]
+                                                          }
+                                              },
+                           'Michael Lush' => {
+                                               '2006' => {
+                                                           '6' => [
+                                                                    {
+                                                                      'month' => 'June',
+                                                                      'desc' => 'Better Living Through Perl',
+                                                                      'author' => 'Michael Lush'
+                                                                    }
+                                                                  ]
+                                                         }
+                                             }
+                         }
+        }; in /home/tony/MKPM/lib/mkpm.pm l. 12
+[17357]  core @0.012950> loading Dancer::Handler::Standalone handler in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer/Handler.pm l. 45
+[17357]  core @0.013123> loading handler 'Dancer::Handler::Standalone' in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer.pm l. 464
+>> Dancer 1.3095 server 17357 listening on http://0.0.0.0:3000
+[17357]  core @0.000198> request: GET / from 78.40.152.129 in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer/Handler.pm l. 56
+[17357]  core @0.000681> [hit #1]Trying to match 'GET /' against /^\/$/ (generated from '/') in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer/Route.pm l. 84
+[17357]  core @0.000813> [hit #1]  --> got 1 in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer/Route.pm l. 102
+[17357]  core @0.071860> [hit #1]response: 200 in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer/Handler.pm l. 179
+[17357]  core @0.000219> request: GET /css/jqueryslidemenu.css from 78.40.152.129 in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer/Handler.pm l. 56
+[17357]  core @0.005234> [hit #2]response: 200 in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer/Handler.pm l. 179
+[17357]  core @0.000092> request: GET /jquery/jquery.min.js from 78.40.152.129 in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer/Handler.pm l. 56
+[17357]  core @0.000535> [hit #3]response: 200 in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer/Handler.pm l. 179
+[17357]  core @0.000084> request: GET /css/bootstrap.css from 78.40.152.129 in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer/Handler.pm l. 56
+[17357]  core @0.000558> [hit #4]response: 200 in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer/Handler.pm l. 179
+[17357]  core @0.000212> request: GET /jquery/jqueryslidemenu.js from 78.40.152.129 in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer/Handler.pm l. 56
+[17357]  core @0.001006> [hit #5]response: 200 in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer/Handler.pm l. 179
+[17357]  core @0.000209> request: GET /images/right.gif from 78.40.152.129 in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer/Handler.pm l. 56
+[17357]  core @0.001048> [hit #6]response: 200 in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer/Handler.pm l. 179
+[17357]  core @0.000078> request: GET /images/down.gif from 78.40.152.129 in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer/Handler.pm l. 56
+[17357]  core @0.000499> [hit #7]response: 200 in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer/Handler.pm l. 179
+[17357]  core @0.000219> request: GET /talks/2009/10/tony_edwardson_moose.pdf from 78.40.152.129 in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer/Handler.pm l. 56
+[17357]  core @0.111084> [hit #8]response: 200 in /home/tony/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/Dancer/Handler.pm l. 179

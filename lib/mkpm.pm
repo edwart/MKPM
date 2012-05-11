@@ -1,13 +1,15 @@
 package mkpm;
+use FindBin qw/ $Bin /;
 use Dancer ':syntax';
 use Data::Dumper;
 
 our $VERSION = '0.1';
 
 our $talks;
-do '/Users/tony/workspace/mkpm/public/talks.data';
+my $filename = dirname(dirname( $Bin )).'/mkpm/public/talks.data';
+do $filename;
 
-debug Dumper $talks;
+debug Dumper $filename, $talks;
 
 get '/' => sub {
     template 'index', { talks => $talks };
